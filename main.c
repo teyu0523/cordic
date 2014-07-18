@@ -27,7 +27,7 @@
     0111 1111 0100 1000 0101 0100 0000 1001,
 };*/
 
-int ARCTAN[30] = {
+long ARCTAN[30] = {
     536870913, 316933406, 167458908, 85004756, 
     42667331, 21354465, 10679838, 5340245, 2670163, 
     1335087, 667544, 333772, 166886, 83443, 41722, 
@@ -35,80 +35,84 @@ int ARCTAN[30] = {
     81, 41, 20, 10, 5, 3, 1
 };
 
-int cordic(int x, int y, int i, int* angle_sum, int* arctan){
+int vectoring_mode(float x, float y){
     // the more iterative process the more percise it is
-    int x_new;
-    int y_new;
-    if(y >= 0){
-        x_new = x + (y >> i);
-        y_new = y - (x >> i);
-        *angle_sum += arctan[i];
-    }else{       
-        x_new = x - (y >> i);
-        y_new = y + (x >> i);
-        *angle_sum -= arctan[i]; 
-    }
-    printf("x: %i ,y: %i ,i: %i ,angle_sum: %i\n", x, y, i , *angle_sum);
-    if(i+1<30){
-        cordic(x_new, y_new, i+1, angle_sum, arctan);
-        return;
-    } else {
-        return;
+    float x_new;
+    float y_new;
+    long z_new;
+    int i;
+    for(i=0; i<30; i++){
+        if(y >= 0){
+            x_new = x + (pow(2,-i)*y);
+            y_new = y - (pow(2,-i)*x);
+            z_new += ARCTAN[i];
+        }else{       
+            x_new = x - (pow(2,-i)*y);
+            y_new = y + (pow(2,-i)*x);
+            z_new -= ARCTAN[i];
+        }
+        x = x_new;
+        y = y_new;
+        printf("x: %lf ,y: %lf ,i: %i ,z: %lu\n", x_new, y_new, i , z_new>>22);
     }
 }
 
-int rotational(int x, int y, int* z, int i, int* arctan){
+int rotational_mode(float x, float y){
     // the more iterative process the more percise it is
-    int x_new;
-    int y_new;
-    int z_new;
-    if(*z < 0){
-        x_new = x + pow(2,-i)*y;
-        y_new = y - pow(2,-i)*x;
-        z_new = *z + ARCTAN[i];
-    }else{       
-        x_new = x - pow(2,-i)*y;
-        y_new = y + pow(2,-i)*x;
-        z_new = *z - ARCTAN[i];
+    float x_new;
+    float y_new;
+    int i;
+    long z_new;
+    for(i=0; i<30; i++){
+        if(z_new < 0){
+            x_new = x + (pow(2,-i)*y);
+            y_new = y - (pow(2,-i)*x);
+            z_new += ARCTAN[i];
+        }else{       
+            x_new = x - (pow(2,-i)*y);
+            y_new = y + (pow(2,-i)*x);
+            z_new -= ARCTAN[i];
+        }
+        printf("x: %lf ,y: %lf ,i: %i ,z: %lu\n", x_new/pow(2,22), y_new/pow(2,22), i , z_new>>22);
     }
-    printf("x: %lf ,y: %lf ,i: %i ,angle_sum: %i\n", (float)x_new/pow(2,32), (float)y_new/pow(2,32), i , z_new);
-    if(i+1<30){
-        rotational(x_new, y_new, &z_new, i+1, arctan);
+    /*if(i+1<30){
+        rotational_mode(x_new, y_new, i+1);
         return;
     } else {
         return;
-    }
-}
-    
+    }*/
+}   
 
-int storeArctanTable(int* arctan){
+int storeArctanTable(long arctan[30]){
     #define PI 3.14159265
-    signed int i = 0;
+    int i = 0;
     double result;
-    double result2;
+    long result2;
     
     for(i = 0; i < 30; i++){
         result = atan(pow(2, -i))*180.0/PI;     
-        result2 = result*pow(2,32);
+        result2 = round(result*pow(2,22));
         //result2 = result*256;
-        arctan[i] = round(result2);
-        printf("%lf\n", result2);
+        arctan[i] = result2;
+        printf("%lu \n", result2);
     }
 }
+
 /*
  * 
  */
 int main(int argc, char** argv) {
-    int arctan[30];
-    int i, z_sum=0;
-    storeArctanTable(arctan);
-    printf("Finished storing arctan lookup table\n");
-    for(i = 0; i < 30; i++){
-        printf("%i\n", arctan[i]);
-    }
-    //cordic(1024, 1024, 1, &z_sum, arctan);
-    rotational(1024, 1024, &z_sum, 1, arctan);
-    printf("z is %i\nAngle is %lf", z_sum,  ((float)z_sum/pow(2,32)));//(float)z_sum/256.0);
+    int i;
+    long arctan[30];
+    storeArctanTable(ARCTAN);
+    //ARCTAN = arctan;
+    //float x=*argv[0] ,y=*argv[1] ,z=*argv[2];
+    float z=0;
+    printf("---------------------------------\n");   
+    printf("\nVectoring mode: \n");
+    vectoring_mode(0, 0);
+    printf("\nRotaional_mode: \n");
+    rotational_mode(0, 0);
     return (EXIT_SUCCESS);
 }
 
