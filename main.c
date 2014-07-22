@@ -59,7 +59,6 @@ int rotational_mode(long *x, long *y, long z){
         }
         *x = x_new;
         *y = y_new;
-        printf("%lf %lf \n", *x/SCALE_CONST, *y/SCALE_CONST);
     }
 }   
 
