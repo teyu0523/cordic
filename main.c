@@ -79,4 +79,3 @@ int main(int argc, char** argv) {
     printf("sine: %lf, cosine: %lf\n", x/SCALE_CONST/A_CONST, y/SCALE_CONST/A_CONST);
     return (EXIT_SUCCESS);
 }
-
