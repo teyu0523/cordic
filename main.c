@@ -62,25 +62,7 @@ int rotational_mode(long *x, long *y, long z){
     }
 }   
 
-int storeArctanTable(long arctan[30]){
-    #define PI 3.14159265
-    int i = 0;
-    double result;
-    long result2;
-    
-    for(i = 0; i < 30; i++){
-        result = atan(pow(2, -i))*180.0/PI;     
-        result2 = round(result*pow(2,22));
-        arctan[i] = result2;
-        printf("%lu \n", result2);
-    }
-}
-
 int main(int argc, char** argv) {
-    //long arctan[30];
-    //storeArctanTable(ARCTAN);
-    //ARCTAN = arctan;
-    //float x=*argv[0] ,y=*argv[1] ,z=*argv[2];
     long z = 0;
     long x = 1;
     long y = 1;
