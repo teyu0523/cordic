@@ -10,61 +10,70 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-//need to put this somewhere else
 
-//All bits are calculated by degree*2^32/360 where each index representing "i" of 2^-i = tan(theta)
-//Each calculation is stored so that the first 2 bits representing the location in 360 degree.
-//      00 indicates the range between 0 and pi/2
-//      01 indicates the range between pi/2 and pi
-//      10 indicates the range between pi and 3pi/2
-//      11 indicates the range between 3pi/2 and 2pi
-/*int32_t ARCTAN[] = {
-    0010 0000 0000 0000 0000 0000 0000 0000,
-    0001 0010 1110 0100 0000 0101 0001 1101,
-    0110 0011 1101 0000 0011 0011 1001 0011,
-    0011 0010 1010 1010 1011 0010 0100 1010,
-    0001 1001 0110 1110 1000 0100 1001 1111,
-    0111 1111 0100 1000 0101 0100 0000 1001,
-};*/
+#define SCALE_CONST 4194304.0
+#define A_CONST 1.646760
 
+long ARCTAN[29] = {
+    188743680, 111421901, 58872272, 29884485, 15000234, 7507429, 3754631, 
+    1877430, 938729, 469366, 234683, 117342, 58671, 29335, 14668, 7334, 3667,
+    1833, 917, 458, 229, 115, 57, 29, 14, 7, 4, 2, 1
+};
 
-/*
- * Perform sine, cosine, and etc 
- */
-int operations(){
-    // should be using only addition and subtraction with shifting.
-    
-    // cos(Q) = 1/sqrt(1+tan(Q)^2) = 1/sqrt(1+(+-2^-i)^2) = Ki 
-    
-    // 
-    
-}
-
-int cordic(){
+int vectoring_mode(long x, long y, long *z){
     // the more iterative process the more percise it is
+    long x_new;
+    long y_new;
+    int i;
+    for(i=0; i<29; i++){
+        if(y >= 0){
+            x_new = x + (y >> i); 
+            y_new = y - (x >> i); 
+            *z += ARCTAN[i];
+        }else{       
+            x_new = x - (y >> i); 
+            y_new = y + (x >> i); 
+            *z -= ARCTAN[i];
+        }
+        x = x_new;
+        y = y_new;
+    }
 }
 
-int getBitShiftValues(){
-    #define PI 3.14159265
-    /*signed int i = 0;
-    double result;
-    double result2;
-    char str[31];
-    for(i = 0; i < 30; i++){
-        if(i==0){
-                result = atan(1)*180.0/PI;       
-        }else{
-                result = atan(pow(2, -i))*180.0/PI;     
+int rotational_mode(long *x, long *y, long z){
+    // the more iterative process the more percise it is
+    long x_new;
+    long y_new;
+    int i;
+    for(i=0; i<29; i++){
+        if(z < 0){
+            x_new = *x + (*y >> i);
+            y_new = *y - (*x >> i);
+            z += ARCTAN[i];
+        }else{       
+            x_new = *x - (*y >> i);
+            y_new = *y + (*x >> i);
+            z -= ARCTAN[i];
         }
-        result2 = result*pow(2,32)/360;
-        printf("%lf   %lf\n", result2, result);
-    }*/
-}
-/*
- * 
- */
+        *x = x_new;
+        *y = y_new;
+    }
+}   
+
 int main(int argc, char** argv) {
-    
+    long z = 0;
+    long x = 1*SCALE_CONST;
+    long y = 1*SCALE_CONST;
+    printf("\nVectoring mode: \n");
+    // (x, y, 0)
+    vectoring_mode(x, y, &z);
+    printf("arctan: %lf\n", z/SCALE_CONST);
+    printf("\nRotaional_mode: \n");
+    // (1, 0, z)
+    x = 1*SCALE_CONST;
+    y = 0*SCALE_CONST;
+    z = ARCTAN[0];
+    rotational_mode(&x, &y, z);
+    printf("sine: %lf, cosine: %lf\n", x/SCALE_CONST/A_CONST, y/SCALE_CONST/A_CONST);
     return (EXIT_SUCCESS);
 }
-
