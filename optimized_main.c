@@ -15,7 +15,7 @@
 #define A_CONST 1.646760
 
 
-int vectoring_mode(int x, int y, int *z){
+int vectoring_mode(int x, int y, int * restrict z){
     // the more iterative process the more percise it is
 
     int ARCTAN[] = {
@@ -28,7 +28,8 @@ int vectoring_mode(int x, int y, int *z){
     int x_new;
     int y_new;
     int i;
-    for(i=0; i<32; i++){
+    for(i-=i; i<32; i+=8){
+        //iteration 0
         if(y >= 0){
             x_new = x + (y >> i); 
             y_new = y - (x >> i); 
@@ -40,12 +41,103 @@ int vectoring_mode(int x, int y, int *z){
         }
         x = x_new;
         y = y_new;
+
+        //iteration 1
+        if(y >= 0){
+            x_new = x + (y >> (i+1)); 
+            y_new = y - (x >> (i+1)); 
+            local_z += ARCTAN[(i+1)];
+        }else{       
+            x_new = x - (y >> (i+1)); 
+            y_new = y + (x >> (i+1)); 
+            local_z -= ARCTAN[(i+1)];
+        }
+        x = x_new;
+        y = y_new;
+
+        //iteration 2
+        if(y >= 0){
+            x_new = x + (y >> (i+2)); 
+            y_new = y - (x >> (i+2)); 
+            local_z += ARCTAN[(i+2)];
+        }else{       
+            x_new = x - (y >> (i+2)); 
+            y_new = y + (x >> (i+2)); 
+            local_z -= ARCTAN[(i+2)];
+        }
+        x = x_new;
+        y = y_new;
+
+        //iteration 3
+        if(y >= 0){
+            x_new = x + (y >> (i+3)); 
+            y_new = y - (x >> (i+3)); 
+            local_z += ARCTAN[(i+3)];
+        }else{       
+            x_new = x - (y >> (i+3)); 
+            y_new = y + (x >> (i+3)); 
+            local_z -= ARCTAN[(i+3)];
+        }
+        x = x_new;
+        y = y_new;
+
+        //iteration 4
+        if(y >= 0){
+            x_new = x + (y >> (i+4)); 
+            y_new = y - (x >> (i+4)); 
+            local_z += ARCTAN[(i+4)];
+        }else{       
+            x_new = x - (y >> (i+4)); 
+            y_new = y + (x >> (i+4)); 
+            local_z -= ARCTAN[(i+4)];
+        }
+        x = x_new;
+        y = y_new;
+
+        //iteration 5
+        if(y >= 0){
+            x_new = x + (y >> (i+5)); 
+            y_new = y - (x >> (i+5)); 
+            local_z += ARCTAN[(i+5)];
+        }else{       
+            x_new = x - (y >> (i+5)); 
+            y_new = y + (x >> (i+5)); 
+            local_z -= ARCTAN[(i+5)];
+        }
+        x = x_new;
+        y = y_new;
+
+        //iteration 6
+        if(y >= 0){
+            x_new = x + (y >> (i+6)); 
+            y_new = y - (x >> (i+6)); 
+            local_z += ARCTAN[(i+6)];
+        }else{       
+            x_new = x - (y >> (i+6)); 
+            y_new = y + (x >> (i+6)); 
+            local_z -= ARCTAN[(i+6)];
+        }
+        x = x_new;
+        y = y_new;
+
+        //iteration 7
+        if(y >= 0){
+            x_new = x + (y >> (i+7)); 
+            y_new = y - (x >> (i+7)); 
+            local_z += ARCTAN[(i+7)];
+        }else{       
+            x_new = x - (y >> (i+7)); 
+            y_new = y + (x >> (i+7)); 
+            local_z -= ARCTAN[(i+7)];
+        }
+        x = x_new;
+        y = y_new;
     }
 
     *z = local_z;
 }
 
-int rotational_mode(int *x, int *y, int z){
+int rotational_mode(int * restrict x, int * restrict y, int z){
     // the more iterative process the more percise it is
 
     int ARCTAN[] = {
@@ -59,7 +151,8 @@ int rotational_mode(int *x, int *y, int z){
     int x_new;
     int y_new;
     int i;
-    for(i=0; i<32; i++){
+    for(i-=i; i<32; i+=8){
+        //iteration 0
         if(z < 0){
             x_new = local_x + (local_y >> i);
             y_new = local_y - (local_x >> i);
@@ -71,6 +164,98 @@ int rotational_mode(int *x, int *y, int z){
         }
         local_x = x_new;
         local_y = y_new;
+
+        //iteration 1
+        if(z < 0){
+            x_new = local_x + (local_y >> (i+1));
+            y_new = local_y - (local_x >> (i+1));
+            z += ARCTAN[i+1];
+        }else{       
+            x_new = local_x - (local_y >> (i+1));
+            y_new = local_y + (local_x >> (i+1));
+            z -= ARCTAN[i+1];
+        }
+        local_x = x_new;
+        local_y = y_new;
+
+        //iteration 2
+        if(z < 0){
+            x_new = local_x + (local_y >> (i+2));
+            y_new = local_y - (local_x >> (i+2));
+            z += ARCTAN[i+2];
+        }else{       
+            x_new = local_x - (local_y >> (i+2));
+            y_new = local_y + (local_x >> (i+2));
+            z -= ARCTAN[i+2];
+        }
+        local_x = x_new;
+        local_y = y_new;
+
+        //iteration 3
+        if(z < 0){
+            x_new = local_x + (local_y >> (i+3));
+            y_new = local_y - (local_x >> (i+3));
+            z += ARCTAN[i+3];
+        }else{       
+            x_new = local_x - (local_y >> (i+3));
+            y_new = local_y + (local_x >> (i+3));
+            z -= ARCTAN[i+3];
+        }
+        local_x = x_new;
+        local_y = y_new;
+
+        //iteration 4
+        if(z < 0){
+            x_new = local_x + (local_y >> (i+4));
+            y_new = local_y - (local_x >> (i+4));
+            z += ARCTAN[i+4];
+        }else{       
+            x_new = local_x - (local_y >> (i+4));
+            y_new = local_y + (local_x >> (i+4));
+            z -= ARCTAN[i+4];
+        }
+        local_x = x_new;
+        local_y = y_new;
+
+        //iteration 5
+        if(z < 0){
+            x_new = local_x + (local_y >> (i+5));
+            y_new = local_y - (local_x >> (i+5));
+            z += ARCTAN[i+5];
+        }else{       
+            x_new = local_x - (local_y >> (i+5));
+            y_new = local_y + (local_x >> (i+5));
+            z -= ARCTAN[i+5];
+        }
+        local_x = x_new;
+        local_y = y_new;
+
+        //iteration 6
+        if(z < 0){
+            x_new = local_x + (local_y >> (i+6));
+            y_new = local_y - (local_x >> (i+6));
+            z += ARCTAN[i+6];
+        }else{       
+            x_new = local_x - (local_y >> (i+6));
+            y_new = local_y + (local_x >> (i+6));
+            z -= ARCTAN[i+6];
+        }
+        local_x = x_new;
+        local_y = y_new;
+
+        //iteration 7
+        if(z < 0){
+            x_new = local_x + (local_y >> (i+7));
+            y_new = local_y - (local_x >> (i+7));
+            z += ARCTAN[i+7];
+        }else{       
+            x_new = local_x - (local_y >> (i+7));
+            y_new = local_y + (local_x >> (i+7));
+            z -= ARCTAN[i+7];
+        }
+        local_x = x_new;
+        local_y = y_new;
+
     }
 
     *x = local_x;
