@@ -148,6 +148,19 @@ int vectoring_mode(int x, int y, int *  z){
     }
     //second last iteration
     if(y >= 0){
+        x_new = x + (y >> (i)); 
+        y_new = y - (x >> (i)); 
+        local_z += ARCTAN[(i)];
+    }else{       
+        x_new = x - (y >> (i)); 
+        y_new = y + (x >> (i)); 
+        local_z -= ARCTAN[(i)];
+    }
+    x = x_new;
+    y = y_new;
+
+    //last iteration
+    if(y >= 0){
         x_new = x + (y >> (i+1)); 
         y_new = y - (x >> (i+1)); 
         local_z += ARCTAN[(i+1)];
@@ -155,19 +168,6 @@ int vectoring_mode(int x, int y, int *  z){
         x_new = x - (y >> (i+1)); 
         y_new = y + (x >> (i+1)); 
         local_z -= ARCTAN[(i+1)];
-    }
-    x = x_new;
-    y = y_new;
-
-    //last iteration
-    if(y >= 0){
-        x_new = x + (y >> (i+2)); 
-        y_new = y - (x >> (i+2)); 
-        local_z += ARCTAN[(i+2)];
-    }else{       
-        x_new = x - (y >> (i+2)); 
-        y_new = y + (x >> (i+2)); 
-        local_z -= ARCTAN[(i+2)];
     }
     x = x_new;
     y = y_new;
@@ -307,6 +307,18 @@ int rotational_mode(int *  x, int *  y, int z){
     }
     //second last
     if(z < 0){
+        x_new = local_x + (local_y >> (i));
+        y_new = local_y - (local_x >> (i));
+        z += ARCTAN[i];
+    }else{       
+        x_new = local_x - (local_y >> (i));
+        y_new = local_y + (local_x >> (i));
+        z -= ARCTAN[i];
+    }
+    local_x = x_new;
+    local_y = y_new;
+    //last
+    if(z < 0){
         x_new = local_x + (local_y >> (i+1));
         y_new = local_y - (local_x >> (i+1));
         z += ARCTAN[i+1];
@@ -314,18 +326,6 @@ int rotational_mode(int *  x, int *  y, int z){
         x_new = local_x - (local_y >> (i+1));
         y_new = local_y + (local_x >> (i+1));
         z -= ARCTAN[i+1];
-    }
-    local_x = x_new;
-    local_y = y_new;
-    //last
-    if(z < 0){
-        x_new = local_x + (local_y >> (i+2));
-        y_new = local_y - (local_x >> (i+2));
-        z += ARCTAN[i+2];
-    }else{       
-        x_new = local_x - (local_y >> (i+2));
-        y_new = local_y + (local_x >> (i+2));
-        z -= ARCTAN[i+2];
     }
     local_x = x_new;
     local_y = y_new;
