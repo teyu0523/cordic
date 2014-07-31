@@ -15,7 +15,7 @@
 #define A_CONST 1.646760
 
 
-int vectoring_mode(int x, int y, int *  z){
+int vectoring_mode(int x, int y, int z){
     // the more iterative process the more percise it is
 
     int ARCTAN[] = {
@@ -23,8 +23,6 @@ int vectoring_mode(int x, int y, int *  z){
         1877430, 938729, 469366, 234683, 117342, 58671, 29335, 14668, 7334,
         3667, 1833, 917, 458, 229, 115, 57, 29, 14, 7, 4, 2, 1
     };
-    register int local_z = *z;
-
     int x_new;
     int y_new;
     int i;
@@ -33,11 +31,11 @@ int vectoring_mode(int x, int y, int *  z){
         if(y >= 0){
             x_new = x + (y >> i); 
             y_new = y - (x >> i); 
-            local_z += ARCTAN[i];
+            z += ARCTAN[i];
         }else{       
             x_new = x - (y >> i); 
             y_new = y + (x >> i); 
-            local_z -= ARCTAN[i];
+            z -= ARCTAN[i];
         }
         x = x_new;
         y = y_new;
@@ -46,11 +44,11 @@ int vectoring_mode(int x, int y, int *  z){
         if(y >= 0){
             x_new = x + (y >> (i+1)); 
             y_new = y - (x >> (i+1)); 
-            local_z += ARCTAN[(i+1)];
+            z += ARCTAN[(i+1)];
         }else{       
             x_new = x - (y >> (i+1)); 
             y_new = y + (x >> (i+1)); 
-            local_z -= ARCTAN[(i+1)];
+            z -= ARCTAN[(i+1)];
         }
         x = x_new;
         y = y_new;
@@ -59,11 +57,11 @@ int vectoring_mode(int x, int y, int *  z){
         if(y >= 0){
             x_new = x + (y >> (i+2)); 
             y_new = y - (x >> (i+2)); 
-            local_z += ARCTAN[(i+2)];
+            z += ARCTAN[(i+2)];
         }else{       
             x_new = x - (y >> (i+2)); 
             y_new = y + (x >> (i+2)); 
-            local_z -= ARCTAN[(i+2)];
+            z -= ARCTAN[(i+2)];
         }
         x = x_new;
         y = y_new;
@@ -72,11 +70,11 @@ int vectoring_mode(int x, int y, int *  z){
         if(y >= 0){
             x_new = x + (y >> (i+3)); 
             y_new = y - (x >> (i+3)); 
-            local_z += ARCTAN[(i+3)];
+            z += ARCTAN[(i+3)];
         }else{       
             x_new = x - (y >> (i+3)); 
             y_new = y + (x >> (i+3)); 
-            local_z -= ARCTAN[(i+3)];
+            z -= ARCTAN[(i+3)];
         }
         x = x_new;
         y = y_new;
@@ -85,11 +83,11 @@ int vectoring_mode(int x, int y, int *  z){
         if(y >= 0){
             x_new = x + (y >> (i+4)); 
             y_new = y - (x >> (i+4)); 
-            local_z += ARCTAN[(i+4)];
+            z += ARCTAN[(i+4)];
         }else{       
             x_new = x - (y >> (i+4)); 
             y_new = y + (x >> (i+4)); 
-            local_z -= ARCTAN[(i+4)];
+            z -= ARCTAN[(i+4)];
         }
         x = x_new;
         y = y_new;
@@ -98,11 +96,11 @@ int vectoring_mode(int x, int y, int *  z){
         if(y >= 0){
             x_new = x + (y >> (i+5)); 
             y_new = y - (x >> (i+5)); 
-            local_z += ARCTAN[(i+5)];
+            z += ARCTAN[(i+5)];
         }else{       
             x_new = x - (y >> (i+5)); 
             y_new = y + (x >> (i+5)); 
-            local_z -= ARCTAN[(i+5)];
+            z -= ARCTAN[(i+5)];
         }
         x = x_new;
         y = y_new;
@@ -111,11 +109,11 @@ int vectoring_mode(int x, int y, int *  z){
         if(y >= 0){
             x_new = x + (y >> (i+6)); 
             y_new = y - (x >> (i+6)); 
-            local_z += ARCTAN[(i+6)];
+            z += ARCTAN[(i+6)];
         }else{       
             x_new = x - (y >> (i+6)); 
             y_new = y + (x >> (i+6)); 
-            local_z -= ARCTAN[(i+6)];
+            z -= ARCTAN[(i+6)];
         }
         x = x_new;
         y = y_new;
@@ -124,11 +122,11 @@ int vectoring_mode(int x, int y, int *  z){
         if(y >= 0){
             x_new = x + (y >> (i+7)); 
             y_new = y - (x >> (i+7)); 
-            local_z += ARCTAN[(i+7)];
+            z += ARCTAN[(i+7)];
         }else{       
             x_new = x - (y >> (i+7)); 
             y_new = y + (x >> (i+7)); 
-            local_z -= ARCTAN[(i+7)];
+            z -= ARCTAN[(i+7)];
         }
         x = x_new;
         y = y_new;
@@ -137,11 +135,11 @@ int vectoring_mode(int x, int y, int *  z){
         if(y >= 0){
             x_new = x + (y >> (i+8)); 
             y_new = y - (x >> (i+8)); 
-            local_z += ARCTAN[(i+8)];
+            z += ARCTAN[(i+8)];
         }else{       
             x_new = x - (y >> (i+8)); 
             y_new = y + (x >> (i+8)); 
-            local_z -= ARCTAN[(i+8)];
+            z -= ARCTAN[(i+8)];
         }
         x = x_new;
         y = y_new;
@@ -150,11 +148,11 @@ int vectoring_mode(int x, int y, int *  z){
     if(y >= 0){
         x_new = x + (y >> (i)); 
         y_new = y - (x >> (i)); 
-        local_z += ARCTAN[(i)];
+        z += ARCTAN[(i)];
     }else{       
         x_new = x - (y >> (i)); 
         y_new = y + (x >> (i)); 
-        local_z -= ARCTAN[(i)];
+        z -= ARCTAN[(i)];
     }
     x = x_new;
     y = y_new;
@@ -163,15 +161,15 @@ int vectoring_mode(int x, int y, int *  z){
     if(y >= 0){
         x_new = x + (y >> (i+1)); 
         y_new = y - (x >> (i+1)); 
-        local_z += ARCTAN[(i+1)];
+        z += ARCTAN[(i+1)];
     }else{       
         x_new = x - (y >> (i+1)); 
         y_new = y + (x >> (i+1)); 
-        local_z -= ARCTAN[(i+1)];
+        z -= ARCTAN[(i+1)];
     }
     x = x_new;
     y = y_new;
-    *z = local_z;
+    return(z);
 }
 
 int rotational_mode(int *  x, int *  y, int z){
@@ -341,12 +339,12 @@ int main(int argc, char** argv) {
     // (x, y, 0)
     // Testbench
     printf("\nVectoring mode: \n");
-    vectoring_mode(x, y, &z);
+    z = vectoring_mode(x, y, z);
     printf("x: 1, y: 1, arctan: %lf\n", z/SCALE_CONST);
     x = 1*SCALE_CONST;
     y = 1.7320508075688772935274*SCALE_CONST;
     z = 0*SCALE_CONST;
-    vectoring_mode(x, y, &z);
+    z = vectoring_mode(x, y, z);
     printf("x: 1, y: sqrt(3), arctan: %lf\n", z/SCALE_CONST);
 
     printf("\nRotaional_mode: \n");
