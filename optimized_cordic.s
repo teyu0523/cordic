@@ -334,8 +334,8 @@ vectoring_mode:
 	blt	.L11	@,
 	ldr	r3, [fp, #-24]	@ tmp397, i
 	add	r2, r3, #4	@ D.2653, tmp397,
-	ldr	r3, [fp, #-156]	@ tmp398, y
-	mov	r2, r3, asr r2	@ D.2654, tmp398,
+	ldr	r4, [fp, #-156]	@ tmp398, y
+	mov	r2, r4, asr r2	@ D.2654, tmp398,
 	ldr	r3, [fp, #-152]	@ tmp399, x
 	add	r3, r2, r3	@ tmp400, D.2654, tmp399
 	str	r3, [fp, #-32]	@ tmp400, x_new
@@ -343,8 +343,8 @@ vectoring_mode:
 	add	r2, r3, #4	@ D.2655, tmp401,
 	ldr	r3, [fp, #-152]	@ tmp402, x
 	mov	r2, r3, asr r2	@ D.2656, tmp402,
-	ldr	r3, [fp, #-156]	@ tmp403, y
-	rsb	r3, r2, r3	@ tmp404, D.2656, tmp403
+	@ldr	r3, [fp, #-156]	@ tmp403, y
+	rsb	r3, r2, r4	@ tmp404, D.2656, tmp403
 	str	r3, [fp, #-28]	@ tmp404, y_new
 	ldr	r3, [fp, #-24]	@ tmp405, i
 	add	r3, r3, #4	@ D.2657, tmp405,
@@ -361,8 +361,8 @@ vectoring_mode:
 .L11:
 	ldr	r3, [fp, #-24]	@ tmp412, i
 	add	r2, r3, #4	@ D.2659, tmp412,
-	ldr	r3, [fp, #-156]	@ tmp413, y
-	mov	r2, r3, asr r2	@ D.2660, tmp413,
+	ldr	r4, [fp, #-156]	@ tmp413, y
+	mov	r2, r4, asr r2	@ D.2660, tmp413,
 	ldr	r3, [fp, #-152]	@ tmp414, x
 	rsb	r3, r2, r3	@ tmp415, D.2660, tmp414
 	str	r3, [fp, #-32]	@ tmp415, x_new
@@ -370,8 +370,8 @@ vectoring_mode:
 	add	r2, r3, #4	@ D.2661, tmp416,
 	ldr	r3, [fp, #-152]	@ tmp417, x
 	mov	r2, r3, asr r2	@ D.2662, tmp417,
-	ldr	r3, [fp, #-156]	@ tmp418, y
-	add	r3, r2, r3	@ tmp419, D.2662, tmp418
+	@ldr	r3, [fp, #-156]	@ tmp418, y
+	add	r3, r2, r4	@ tmp419, D.2662, tmp418
 	str	r3, [fp, #-28]	@ tmp419, y_new
 	ldr	r3, [fp, #-24]	@ tmp420, i
 	add	r3, r3, #4	@ D.2663, tmp420,
@@ -394,8 +394,8 @@ vectoring_mode:
 	blt	.L13	@,
 	ldr	r3, [fp, #-24]	@ tmp430, i
 	add	r2, r3, #5	@ D.2665, tmp430,
-	ldr	r3, [fp, #-156]	@ tmp431, y
-	mov	r2, r3, asr r2	@ D.2666, tmp431,
+	ldr	r4, [fp, #-156]	@ tmp431, y
+	mov	r2, r4, asr r2	@ D.2666, tmp431,
 	ldr	r3, [fp, #-152]	@ tmp432, x
 	add	r3, r2, r3	@ tmp433, D.2666, tmp432
 	str	r3, [fp, #-32]	@ tmp433, x_new
@@ -403,8 +403,8 @@ vectoring_mode:
 	add	r2, r3, #5	@ D.2667, tmp434,
 	ldr	r3, [fp, #-152]	@ tmp435, x
 	mov	r2, r3, asr r2	@ D.2668, tmp435,
-	ldr	r3, [fp, #-156]	@ tmp436, y
-	rsb	r3, r2, r3	@ tmp437, D.2668, tmp436
+	@ldr	r3, [fp, #-156]	@ tmp436, y
+	rsb	r3, r2, r4	@ tmp437, D.2668, tmp436
 	str	r3, [fp, #-28]	@ tmp437, y_new
 	ldr	r3, [fp, #-24]	@ tmp438, i
 	add	r3, r3, #5	@ D.2669, tmp438,
