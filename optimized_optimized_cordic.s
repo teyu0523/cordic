@@ -15,7 +15,7 @@
 @ options passed:  -imultilib armv4t -iprefix
 @ /opt/arm/4.3.2/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.2/ -isysroot
 @ /opt/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc optimized_main.c
-@ -march=armv4t -auxbase-strip main.s -fverbose-asm
+@ -march=armv4t -fverbose-asm
 @ options enabled:  -falign-loops -fargument-alias -fauto-inc-dec
 @ -fbranch-count-reg -fcommon -fearly-inlining
 @ -feliminate-unused-debug-types -ffunction-cse -fgcse-lm -fident -fivopts
@@ -149,13 +149,13 @@ vectoring_mode:
 	str	r3, [fp, #-152]	@ tmp295, x
 	ldr	r3, [fp, #-28]	@ tmp296, y_new
 	str	r3, [fp, #-156]	@ tmp296, y
-	ldr	r3, [fp, #-156]	@ tmp297, y
+	@ldr	r3, [fp, #-156]	@ tmp297, y
 	cmp	r3, #0	@ tmp297,
 	blt	.L5	@,
 	ldr	r3, [fp, #-24]	@ tmp298, i
 	add	r2, r3, #1	@ D.2617, tmp298,
-	ldr	r3, [fp, #-156]	@ tmp299, y
-	mov	r2, r3, asr r2	@ D.2618, tmp299,
+	ldr	r4, [fp, #-156]	@ tmp299, y
+	mov	r2, r4, asr r2	@ D.2618, tmp299,
 	ldr	r3, [fp, #-152]	@ tmp300, x
 	add	r3, r2, r3	@ tmp301, D.2618, tmp300
 	str	r3, [fp, #-32]	@ tmp301, x_new
@@ -163,8 +163,8 @@ vectoring_mode:
 	add	r2, r3, #1	@ D.2619, tmp302,
 	ldr	r3, [fp, #-152]	@ tmp303, x
 	mov	r2, r3, asr r2	@ D.2620, tmp303,
-	ldr	r3, [fp, #-156]	@ tmp304, y
-	rsb	r3, r2, r3	@ tmp305, D.2620, tmp304
+	@ldr	r3, [fp, #-156]	@ tmp304, y
+	rsb	r3, r2, r4	@ tmp305, D.2620, tmp304
 	str	r3, [fp, #-28]	@ tmp305, y_new
 	ldr	r3, [fp, #-24]	@ tmp306, i
 	add	r3, r3, #1	@ D.2621, tmp306,
@@ -181,8 +181,8 @@ vectoring_mode:
 .L5:
 	ldr	r3, [fp, #-24]	@ tmp313, i
 	add	r2, r3, #1	@ D.2623, tmp313,
-	ldr	r3, [fp, #-156]	@ tmp314, y
-	mov	r2, r3, asr r2	@ D.2624, tmp314,
+	ldr	r4, [fp, #-156]	@ tmp314, y
+	mov	r2, r4, asr r2	@ D.2624, tmp314,
 	ldr	r3, [fp, #-152]	@ tmp315, x
 	rsb	r3, r2, r3	@ tmp316, D.2624, tmp315
 	str	r3, [fp, #-32]	@ tmp316, x_new
@@ -190,8 +190,8 @@ vectoring_mode:
 	add	r2, r3, #1	@ D.2625, tmp317,
 	ldr	r3, [fp, #-152]	@ tmp318, x
 	mov	r2, r3, asr r2	@ D.2626, tmp318,
-	ldr	r3, [fp, #-156]	@ tmp319, y
-	add	r3, r2, r3	@ tmp320, D.2626, tmp319
+	@ldr	r3, [fp, #-156]	@ tmp319, y
+	add	r3, r2, r4	@ tmp320, D.2626, tmp319
 	str	r3, [fp, #-28]	@ tmp320, y_new
 	ldr	r3, [fp, #-24]	@ tmp321, i
 	add	r3, r3, #1	@ D.2627, tmp321,
@@ -209,13 +209,13 @@ vectoring_mode:
 	str	r3, [fp, #-152]	@ tmp328, x
 	ldr	r3, [fp, #-28]	@ tmp329, y_new
 	str	r3, [fp, #-156]	@ tmp329, y
-	ldr	r3, [fp, #-156]	@ tmp330, y
+	@ldr	r3, [fp, #-156]	@ tmp330, y
 	cmp	r3, #0	@ tmp330,
 	blt	.L7	@,
 	ldr	r3, [fp, #-24]	@ tmp331, i
 	add	r2, r3, #2	@ D.2629, tmp331,
-	ldr	r3, [fp, #-156]	@ tmp332, y
-	mov	r2, r3, asr r2	@ D.2630, tmp332,
+	ldr	r4, [fp, #-156]	@ tmp332, y
+	mov	r2, r4, asr r2	@ D.2630, tmp332,
 	ldr	r3, [fp, #-152]	@ tmp333, x
 	add	r3, r2, r3	@ tmp334, D.2630, tmp333
 	str	r3, [fp, #-32]	@ tmp334, x_new
@@ -223,8 +223,8 @@ vectoring_mode:
 	add	r2, r3, #2	@ D.2631, tmp335,
 	ldr	r3, [fp, #-152]	@ tmp336, x
 	mov	r2, r3, asr r2	@ D.2632, tmp336,
-	ldr	r3, [fp, #-156]	@ tmp337, y
-	rsb	r3, r2, r3	@ tmp338, D.2632, tmp337
+	@ldr	r3, [fp, #-156]	@ tmp337, y
+	rsb	r3, r2, r4	@ tmp338, D.2632, tmp337
 	str	r3, [fp, #-28]	@ tmp338, y_new
 	ldr	r3, [fp, #-24]	@ tmp339, i
 	add	r3, r3, #2	@ D.2633, tmp339,
@@ -241,8 +241,8 @@ vectoring_mode:
 .L7:
 	ldr	r3, [fp, #-24]	@ tmp346, i
 	add	r2, r3, #2	@ D.2635, tmp346,
-	ldr	r3, [fp, #-156]	@ tmp347, y
-	mov	r2, r3, asr r2	@ D.2636, tmp347,
+	ldr	r4, [fp, #-156]	@ tmp347, y
+	mov	r2, r4, asr r2	@ D.2636, tmp347,
 	ldr	r3, [fp, #-152]	@ tmp348, x
 	rsb	r3, r2, r3	@ tmp349, D.2636, tmp348
 	str	r3, [fp, #-32]	@ tmp349, x_new
@@ -250,8 +250,8 @@ vectoring_mode:
 	add	r2, r3, #2	@ D.2637, tmp350,
 	ldr	r3, [fp, #-152]	@ tmp351, x
 	mov	r2, r3, asr r2	@ D.2638, tmp351,
-	ldr	r3, [fp, #-156]	@ tmp352, y
-	add	r3, r2, r3	@ tmp353, D.2638, tmp352
+	@ldr	r3, [fp, #-156]	@ tmp352, y
+	add	r3, r2, r4	@ tmp353, D.2638, tmp352
 	str	r3, [fp, #-28]	@ tmp353, y_new
 	ldr	r3, [fp, #-24]	@ tmp354, i
 	add	r3, r3, #2	@ D.2639, tmp354,
@@ -269,13 +269,13 @@ vectoring_mode:
 	str	r3, [fp, #-152]	@ tmp361, x
 	ldr	r3, [fp, #-28]	@ tmp362, y_new
 	str	r3, [fp, #-156]	@ tmp362, y
-	ldr	r3, [fp, #-156]	@ tmp363, y
+	@ldr	r3, [fp, #-156]	@ tmp363, y
 	cmp	r3, #0	@ tmp363,
 	blt	.L9	@,
 	ldr	r3, [fp, #-24]	@ tmp364, i
 	add	r2, r3, #3	@ D.2641, tmp364,
-	ldr	r3, [fp, #-156]	@ tmp365, y
-	mov	r2, r3, asr r2	@ D.2642, tmp365,
+	ldr	r4, [fp, #-156]	@ tmp365, y
+	mov	r2, r4, asr r2	@ D.2642, tmp365,
 	ldr	r3, [fp, #-152]	@ tmp366, x
 	add	r3, r2, r3	@ tmp367, D.2642, tmp366
 	str	r3, [fp, #-32]	@ tmp367, x_new
@@ -283,8 +283,8 @@ vectoring_mode:
 	add	r2, r3, #3	@ D.2643, tmp368,
 	ldr	r3, [fp, #-152]	@ tmp369, x
 	mov	r2, r3, asr r2	@ D.2644, tmp369,
-	ldr	r3, [fp, #-156]	@ tmp370, y
-	rsb	r3, r2, r3	@ tmp371, D.2644, tmp370
+	@ldr	r3, [fp, #-156]	@ tmp370, y
+	rsb	r3, r2, r4	@ tmp371, D.2644, tmp370
 	str	r3, [fp, #-28]	@ tmp371, y_new
 	ldr	r3, [fp, #-24]	@ tmp372, i
 	add	r3, r3, #3	@ D.2645, tmp372,
@@ -329,13 +329,13 @@ vectoring_mode:
 	str	r3, [fp, #-152]	@ tmp394, x
 	ldr	r3, [fp, #-28]	@ tmp395, y_new
 	str	r3, [fp, #-156]	@ tmp395, y
-	ldr	r3, [fp, #-156]	@ tmp396, y
+	@ldr	r3, [fp, #-156]	@ tmp396, y
 	cmp	r3, #0	@ tmp396,
 	blt	.L11	@,
 	ldr	r3, [fp, #-24]	@ tmp397, i
 	add	r2, r3, #4	@ D.2653, tmp397,
-	ldr	r3, [fp, #-156]	@ tmp398, y
-	mov	r2, r3, asr r2	@ D.2654, tmp398,
+	ldr	r4, [fp, #-156]	@ tmp398, y
+	mov	r2, r4, asr r2	@ D.2654, tmp398,
 	ldr	r3, [fp, #-152]	@ tmp399, x
 	add	r3, r2, r3	@ tmp400, D.2654, tmp399
 	str	r3, [fp, #-32]	@ tmp400, x_new
@@ -343,8 +343,8 @@ vectoring_mode:
 	add	r2, r3, #4	@ D.2655, tmp401,
 	ldr	r3, [fp, #-152]	@ tmp402, x
 	mov	r2, r3, asr r2	@ D.2656, tmp402,
-	ldr	r3, [fp, #-156]	@ tmp403, y
-	rsb	r3, r2, r3	@ tmp404, D.2656, tmp403
+	@ldr	r3, [fp, #-156]	@ tmp403, y
+	rsb	r3, r2, r4	@ tmp404, D.2656, tmp403
 	str	r3, [fp, #-28]	@ tmp404, y_new
 	ldr	r3, [fp, #-24]	@ tmp405, i
 	add	r3, r3, #4	@ D.2657, tmp405,
@@ -361,8 +361,8 @@ vectoring_mode:
 .L11:
 	ldr	r3, [fp, #-24]	@ tmp412, i
 	add	r2, r3, #4	@ D.2659, tmp412,
-	ldr	r3, [fp, #-156]	@ tmp413, y
-	mov	r2, r3, asr r2	@ D.2660, tmp413,
+	ldr	r4, [fp, #-156]	@ tmp413, y
+	mov	r2, r4, asr r2	@ D.2660, tmp413,
 	ldr	r3, [fp, #-152]	@ tmp414, x
 	rsb	r3, r2, r3	@ tmp415, D.2660, tmp414
 	str	r3, [fp, #-32]	@ tmp415, x_new
@@ -370,8 +370,8 @@ vectoring_mode:
 	add	r2, r3, #4	@ D.2661, tmp416,
 	ldr	r3, [fp, #-152]	@ tmp417, x
 	mov	r2, r3, asr r2	@ D.2662, tmp417,
-	ldr	r3, [fp, #-156]	@ tmp418, y
-	add	r3, r2, r3	@ tmp419, D.2662, tmp418
+	@ldr	r3, [fp, #-156]	@ tmp418, y
+	add	r3, r2, r4	@ tmp419, D.2662, tmp418
 	str	r3, [fp, #-28]	@ tmp419, y_new
 	ldr	r3, [fp, #-24]	@ tmp420, i
 	add	r3, r3, #4	@ D.2663, tmp420,
@@ -389,13 +389,13 @@ vectoring_mode:
 	str	r3, [fp, #-152]	@ tmp427, x
 	ldr	r3, [fp, #-28]	@ tmp428, y_new
 	str	r3, [fp, #-156]	@ tmp428, y
-	ldr	r3, [fp, #-156]	@ tmp429, y
+	@ldr	r3, [fp, #-156]	@ tmp429, y
 	cmp	r3, #0	@ tmp429,
 	blt	.L13	@,
 	ldr	r3, [fp, #-24]	@ tmp430, i
 	add	r2, r3, #5	@ D.2665, tmp430,
-	ldr	r3, [fp, #-156]	@ tmp431, y
-	mov	r2, r3, asr r2	@ D.2666, tmp431,
+	ldr	r4, [fp, #-156]	@ tmp431, y
+	mov	r2, r4, asr r2	@ D.2666, tmp431,
 	ldr	r3, [fp, #-152]	@ tmp432, x
 	add	r3, r2, r3	@ tmp433, D.2666, tmp432
 	str	r3, [fp, #-32]	@ tmp433, x_new
@@ -403,8 +403,8 @@ vectoring_mode:
 	add	r2, r3, #5	@ D.2667, tmp434,
 	ldr	r3, [fp, #-152]	@ tmp435, x
 	mov	r2, r3, asr r2	@ D.2668, tmp435,
-	ldr	r3, [fp, #-156]	@ tmp436, y
-	rsb	r3, r2, r3	@ tmp437, D.2668, tmp436
+	@ldr	r3, [fp, #-156]	@ tmp436, y
+	rsb	r3, r2, r4	@ tmp437, D.2668, tmp436
 	str	r3, [fp, #-28]	@ tmp437, y_new
 	ldr	r3, [fp, #-24]	@ tmp438, i
 	add	r3, r3, #5	@ D.2669, tmp438,
@@ -449,13 +449,13 @@ vectoring_mode:
 	str	r3, [fp, #-152]	@ tmp460, x
 	ldr	r3, [fp, #-28]	@ tmp461, y_new
 	str	r3, [fp, #-156]	@ tmp461, y
-	ldr	r3, [fp, #-156]	@ tmp462, y
+	@ldr	r3, [fp, #-156]	@ tmp462, y
 	cmp	r3, #0	@ tmp462,
 	blt	.L15	@,
 	ldr	r3, [fp, #-24]	@ tmp463, i
 	add	r2, r3, #6	@ D.2677, tmp463,
-	ldr	r3, [fp, #-156]	@ tmp464, y
-	mov	r2, r3, asr r2	@ D.2678, tmp464,
+	ldr	r4, [fp, #-156]	@ tmp464, y
+	mov	r2, r4, asr r2	@ D.2678, tmp464,
 	ldr	r3, [fp, #-152]	@ tmp465, x
 	add	r3, r2, r3	@ tmp466, D.2678, tmp465
 	str	r3, [fp, #-32]	@ tmp466, x_new
@@ -463,8 +463,8 @@ vectoring_mode:
 	add	r2, r3, #6	@ D.2679, tmp467,
 	ldr	r3, [fp, #-152]	@ tmp468, x
 	mov	r2, r3, asr r2	@ D.2680, tmp468,
-	ldr	r3, [fp, #-156]	@ tmp469, y
-	rsb	r3, r2, r3	@ tmp470, D.2680, tmp469
+	@ldr	r3, [fp, #-156]	@ tmp469, y
+	rsb	r3, r2, r4	@ tmp470, D.2680, tmp469
 	str	r3, [fp, #-28]	@ tmp470, y_new
 	ldr	r3, [fp, #-24]	@ tmp471, i
 	add	r3, r3, #6	@ D.2681, tmp471,
@@ -481,8 +481,8 @@ vectoring_mode:
 .L15:
 	ldr	r3, [fp, #-24]	@ tmp478, i
 	add	r2, r3, #6	@ D.2683, tmp478,
-	ldr	r3, [fp, #-156]	@ tmp479, y
-	mov	r2, r3, asr r2	@ D.2684, tmp479,
+	ldr	r4, [fp, #-156]	@ tmp479, y
+	mov	r2, r4, asr r2	@ D.2684, tmp479,
 	ldr	r3, [fp, #-152]	@ tmp480, x
 	rsb	r3, r2, r3	@ tmp481, D.2684, tmp480
 	str	r3, [fp, #-32]	@ tmp481, x_new
@@ -490,8 +490,8 @@ vectoring_mode:
 	add	r2, r3, #6	@ D.2685, tmp482,
 	ldr	r3, [fp, #-152]	@ tmp483, x
 	mov	r2, r3, asr r2	@ D.2686, tmp483,
-	ldr	r3, [fp, #-156]	@ tmp484, y
-	add	r3, r2, r3	@ tmp485, D.2686, tmp484
+	@ldr	r3, [fp, #-156]	@ tmp484, y
+	add	r3, r2, r4	@ tmp485, D.2686, tmp484
 	str	r3, [fp, #-28]	@ tmp485, y_new
 	ldr	r3, [fp, #-24]	@ tmp486, i
 	add	r3, r3, #6	@ D.2687, tmp486,
@@ -509,13 +509,13 @@ vectoring_mode:
 	str	r3, [fp, #-152]	@ tmp493, x
 	ldr	r3, [fp, #-28]	@ tmp494, y_new
 	str	r3, [fp, #-156]	@ tmp494, y
-	ldr	r3, [fp, #-156]	@ tmp495, y
+	@ldr	r3, [fp, #-156]	@ tmp495, y
 	cmp	r3, #0	@ tmp495,
 	blt	.L17	@,
 	ldr	r3, [fp, #-24]	@ tmp496, i
 	add	r2, r3, #7	@ D.2689, tmp496,
-	ldr	r3, [fp, #-156]	@ tmp497, y
-	mov	r2, r3, asr r2	@ D.2690, tmp497,
+	ldr	r4, [fp, #-156]	@ tmp497, y
+	mov	r2, r4, asr r2	@ D.2690, tmp497,
 	ldr	r3, [fp, #-152]	@ tmp498, x
 	add	r3, r2, r3	@ tmp499, D.2690, tmp498
 	str	r3, [fp, #-32]	@ tmp499, x_new
@@ -523,8 +523,8 @@ vectoring_mode:
 	add	r2, r3, #7	@ D.2691, tmp500,
 	ldr	r3, [fp, #-152]	@ tmp501, x
 	mov	r2, r3, asr r2	@ D.2692, tmp501,
-	ldr	r3, [fp, #-156]	@ tmp502, y
-	rsb	r3, r2, r3	@ tmp503, D.2692, tmp502
+	@ldr	r3, [fp, #-156]	@ tmp502, y
+	rsb	r3, r2, r4	@ tmp503, D.2692, tmp502
 	str	r3, [fp, #-28]	@ tmp503, y_new
 	ldr	r3, [fp, #-24]	@ tmp504, i
 	add	r3, r3, #7	@ D.2693, tmp504,
@@ -543,13 +543,13 @@ vectoring_mode:
 	add	r2, r3, #7	@ D.2695, tmp511,
 	ldr	r3, [fp, #-156]	@ tmp512, y
 	mov	r2, r3, asr r2	@ D.2696, tmp512,
-	ldr	r3, [fp, #-152]	@ tmp513, x
-	rsb	r3, r2, r3	@ tmp514, D.2696, tmp513
+	ldr	r4, [fp, #-152]	@ tmp513, x
+	rsb	r3, r2, r4	@ tmp514, D.2696, tmp513
 	str	r3, [fp, #-32]	@ tmp514, x_new
 	ldr	r3, [fp, #-24]	@ tmp515, i
 	add	r2, r3, #7	@ D.2697, tmp515,
-	ldr	r3, [fp, #-152]	@ tmp516, x
-	mov	r2, r3, asr r2	@ D.2698, tmp516,
+	@ldr	r3, [fp, #-152]	@ tmp516, x
+	mov	r2, r4, asr r2	@ D.2698, tmp516,
 	ldr	r3, [fp, #-156]	@ tmp517, y
 	add	r3, r2, r3	@ tmp518, D.2698, tmp517
 	str	r3, [fp, #-28]	@ tmp518, y_new
@@ -569,13 +569,13 @@ vectoring_mode:
 	str	r3, [fp, #-152]	@ tmp526, x
 	ldr	r3, [fp, #-28]	@ tmp527, y_new
 	str	r3, [fp, #-156]	@ tmp527, y
-	ldr	r3, [fp, #-156]	@ tmp528, y
+	@ldr	r3, [fp, #-156]	@ tmp528, y
 	cmp	r3, #0	@ tmp528,
 	blt	.L19	@,
 	ldr	r3, [fp, #-24]	@ tmp529, i
 	add	r2, r3, #8	@ D.2701, tmp529,
-	ldr	r3, [fp, #-156]	@ tmp530, y
-	mov	r2, r3, asr r2	@ D.2702, tmp530,
+	ldr	r4, [fp, #-156]	@ tmp530, y
+	mov	r2, r4, asr r2	@ D.2702, tmp530,
 	ldr	r3, [fp, #-152]	@ tmp531, x
 	add	r3, r2, r3	@ tmp532, D.2702, tmp531
 	str	r3, [fp, #-32]	@ tmp532, x_new
@@ -583,8 +583,8 @@ vectoring_mode:
 	add	r2, r3, #8	@ D.2703, tmp533,
 	ldr	r3, [fp, #-152]	@ tmp534, x
 	mov	r2, r3, asr r2	@ D.2704, tmp534,
-	ldr	r3, [fp, #-156]	@ tmp535, y
-	rsb	r3, r2, r3	@ tmp536, D.2704, tmp535
+	@ldr	r3, [fp, #-156]	@ tmp535, y
+	rsb	r3, r2, r4	@ tmp536, D.2704, tmp535
 	str	r3, [fp, #-28]	@ tmp536, y_new
 	ldr	r3, [fp, #-24]	@ tmp537, i
 	add	r3, r3, #8	@ D.2705, tmp537,
@@ -601,8 +601,8 @@ vectoring_mode:
 .L19:
 	ldr	r3, [fp, #-24]	@ tmp544, i
 	add	r2, r3, #8	@ D.2707, tmp544,
-	ldr	r3, [fp, #-156]	@ tmp545, y
-	mov	r2, r3, asr r2	@ D.2708, tmp545,
+	ldr	r4, [fp, #-156]	@ tmp545, y
+	mov	r2, r4, asr r2	@ D.2708, tmp545,
 	ldr	r3, [fp, #-152]	@ tmp546, x
 	rsb	r3, r2, r3	@ tmp547, D.2708, tmp546
 	str	r3, [fp, #-32]	@ tmp547, x_new
@@ -610,8 +610,8 @@ vectoring_mode:
 	add	r2, r3, #8	@ D.2709, tmp548,
 	ldr	r3, [fp, #-152]	@ tmp549, x
 	mov	r2, r3, asr r2	@ D.2710, tmp549,
-	ldr	r3, [fp, #-156]	@ tmp550, y
-	add	r3, r2, r3	@ tmp551, D.2710, tmp550
+	@ldr	r3, [fp, #-156]	@ tmp550, y
+	add	r3, r2, r4	@ tmp551, D.2710, tmp550
 	str	r3, [fp, #-28]	@ tmp551, y_new
 	ldr	r3, [fp, #-24]	@ tmp552, i
 	add	r3, r3, #8	@ D.2711, tmp552,
@@ -639,17 +639,17 @@ vectoring_mode:
 	ldr	r3, [fp, #-156]	@ tmp564, y
 	cmp	r3, #0	@ tmp564,
 	blt	.L22	@,
-	ldr	r2, [fp, #-156]	@ tmp565, y
+	ldr	r4, [fp, #-156]	@ tmp565, y
 	ldr	r3, [fp, #-24]	@ tmp566, i
-	mov	r2, r2, asr r3	@ D.2713, tmp565,
+	mov	r2, r4, asr r3	@ D.2713, tmp565,
 	ldr	r3, [fp, #-152]	@ tmp567, x
 	add	r3, r2, r3	@ tmp568, D.2713, tmp567
 	str	r3, [fp, #-32]	@ tmp568, x_new
 	ldr	r2, [fp, #-152]	@ tmp569, x
 	ldr	r3, [fp, #-24]	@ tmp570, i
 	mov	r2, r2, asr r3	@ D.2714, tmp569,
-	ldr	r3, [fp, #-156]	@ tmp571, y
-	rsb	r3, r2, r3	@ tmp572, D.2714, tmp571
+	@ldr	r3, [fp, #-156]	@ tmp571, y
+	rsb	r3, r2, r4	@ tmp572, D.2714, tmp571
 	str	r3, [fp, #-28]	@ tmp572, y_new
 	ldr	r3, [fp, #-24]	@ i.3, i
 	mvn	r2, #127	@ tmp573,
@@ -666,12 +666,12 @@ vectoring_mode:
 	ldr	r2, [fp, #-156]	@ tmp579, y
 	ldr	r3, [fp, #-24]	@ tmp580, i
 	mov	r2, r2, asr r3	@ D.2717, tmp579,
-	ldr	r3, [fp, #-152]	@ tmp581, x
-	rsb	r3, r2, r3	@ tmp582, D.2717, tmp581
+	ldr	r4, [fp, #-152]	@ tmp581, x
+	rsb	r3, r2, r4	@ tmp582, D.2717, tmp581
 	str	r3, [fp, #-32]	@ tmp582, x_new
-	ldr	r2, [fp, #-152]	@ tmp583, x
+	@ldr	r2, [fp, #-152]	@ tmp583, x
 	ldr	r3, [fp, #-24]	@ tmp584, i
-	mov	r2, r2, asr r3	@ D.2718, tmp583,
+	mov	r2, r4, asr r3	@ D.2718, tmp583,
 	ldr	r3, [fp, #-156]	@ tmp585, y
 	add	r3, r2, r3	@ tmp586, D.2718, tmp585
 	str	r3, [fp, #-28]	@ tmp586, y_new
@@ -690,13 +690,13 @@ vectoring_mode:
 	str	r3, [fp, #-152]	@ tmp593, x
 	ldr	r3, [fp, #-28]	@ tmp594, y_new
 	str	r3, [fp, #-156]	@ tmp594, y
-	ldr	r3, [fp, #-156]	@ tmp595, y
+	@ldr	r3, [fp, #-156]	@ tmp595, y
 	cmp	r3, #0	@ tmp595,
 	blt	.L24	@,
 	ldr	r3, [fp, #-24]	@ tmp596, i
 	add	r2, r3, #1	@ D.2721, tmp596,
-	ldr	r3, [fp, #-156]	@ tmp597, y
-	mov	r2, r3, asr r2	@ D.2722, tmp597,
+	ldr	r4, [fp, #-156]	@ tmp597, y
+	mov	r2, r4, asr r2	@ D.2722, tmp597,
 	ldr	r3, [fp, #-152]	@ tmp598, x
 	add	r3, r2, r3	@ tmp599, D.2722, tmp598
 	str	r3, [fp, #-32]	@ tmp599, x_new
@@ -704,8 +704,8 @@ vectoring_mode:
 	add	r2, r3, #1	@ D.2723, tmp600,
 	ldr	r3, [fp, #-152]	@ tmp601, x
 	mov	r2, r3, asr r2	@ D.2724, tmp601,
-	ldr	r3, [fp, #-156]	@ tmp602, y
-	rsb	r3, r2, r3	@ tmp603, D.2724, tmp602
+	@ldr	r3, [fp, #-156]	@ tmp602, y
+	rsb	r3, r2, r4	@ tmp603, D.2724, tmp602
 	str	r3, [fp, #-28]	@ tmp603, y_new
 	ldr	r3, [fp, #-24]	@ tmp604, i
 	add	r3, r3, #1	@ D.2725, tmp604,
@@ -722,8 +722,8 @@ vectoring_mode:
 .L24:
 	ldr	r3, [fp, #-24]	@ tmp611, i
 	add	r2, r3, #1	@ D.2727, tmp611,
-	ldr	r3, [fp, #-156]	@ tmp612, y
-	mov	r2, r3, asr r2	@ D.2728, tmp612,
+	ldr	r4, [fp, #-156]	@ tmp612, y
+	mov	r2, r4, asr r2	@ D.2728, tmp612,
 	ldr	r3, [fp, #-152]	@ tmp613, x
 	rsb	r3, r2, r3	@ tmp614, D.2728, tmp613
 	str	r3, [fp, #-32]	@ tmp614, x_new
@@ -731,8 +731,8 @@ vectoring_mode:
 	add	r2, r3, #1	@ D.2729, tmp615,
 	ldr	r3, [fp, #-152]	@ tmp616, x
 	mov	r2, r3, asr r2	@ D.2730, tmp616,
-	ldr	r3, [fp, #-156]	@ tmp617, y
-	add	r3, r2, r3	@ tmp618, D.2730, tmp617
+	@ldr	r3, [fp, #-156]	@ tmp617, y
+	add	r3, r2, r4	@ tmp618, D.2730, tmp617
 	str	r3, [fp, #-28]	@ tmp618, y_new
 	ldr	r3, [fp, #-24]	@ tmp619, i
 	add	r3, r3, #1	@ D.2731, tmp619,
@@ -1286,8 +1286,8 @@ rotational_mode:
 .L45:
 	ldr	r3, [fp, #-32]	@ tmp515, i
 	add	r2, r3, #7	@ D.2871, tmp515,
-	ldr	r3, [fp, #-164]	@ tmp516, y
-	mov	r2, r3, asr r2	@ D.2872, tmp516,
+	ldr	r4, [fp, #-164]	@ tmp516, y
+	mov	r2, r4, asr r2	@ D.2872, tmp516,
 	ldr	r3, [fp, #-160]	@ tmp517, x
 	rsb	r3, r2, r3	@ tmp518, D.2872, tmp517
 	str	r3, [fp, #-40]	@ tmp518, x_new
@@ -1295,8 +1295,8 @@ rotational_mode:
 	add	r2, r3, #7	@ D.2873, tmp519,
 	ldr	r3, [fp, #-160]	@ tmp520, x
 	mov	r2, r3, asr r2	@ D.2874, tmp520,
-	ldr	r3, [fp, #-164]	@ tmp521, y
-	add	r3, r2, r3	@ tmp522, D.2874, tmp521
+	@ldr	r3, [fp, #-164]	@ tmp521, y
+	add	r3, r2, r4	@ tmp522, D.2874, tmp521
 	str	r3, [fp, #-36]	@ tmp522, y_new
 	ldr	r3, [fp, #-32]	@ tmp523, i
 	add	r3, r3, #7	@ D.2875, tmp523,
@@ -1319,8 +1319,8 @@ rotational_mode:
 	bge	.L47	@,
 	ldr	r3, [fp, #-32]	@ tmp533, i
 	add	r2, r3, #8	@ D.2877, tmp533,
-	ldr	r3, [fp, #-164]	@ tmp534, y
-	mov	r2, r3, asr r2	@ D.2878, tmp534,
+	ldr	r4, [fp, #-164]	@ tmp534, y
+	mov	r2, r4, asr r2	@ D.2878, tmp534,
 	ldr	r3, [fp, #-160]	@ tmp535, x
 	add	r3, r2, r3	@ tmp536, D.2878, tmp535
 	str	r3, [fp, #-40]	@ tmp536, x_new
@@ -1328,8 +1328,8 @@ rotational_mode:
 	add	r2, r3, #8	@ D.2879, tmp537,
 	ldr	r3, [fp, #-160]	@ tmp538, x
 	mov	r2, r3, asr r2	@ D.2880, tmp538,
-	ldr	r3, [fp, #-164]	@ tmp539, y
-	rsb	r3, r2, r3	@ tmp540, D.2880, tmp539
+	@ldr	r4, [fp, #-164]	@ tmp539, y
+	rsb	r3, r2, r4	@ tmp540, D.2880, tmp539
 	str	r3, [fp, #-36]	@ tmp540, y_new
 	ldr	r3, [fp, #-32]	@ tmp541, i
 	add	r3, r3, #8	@ D.2881, tmp541,
@@ -1346,8 +1346,8 @@ rotational_mode:
 .L47:
 	ldr	r3, [fp, #-32]	@ tmp548, i
 	add	r2, r3, #8	@ D.2883, tmp548,
-	ldr	r3, [fp, #-164]	@ tmp549, y
-	mov	r2, r3, asr r2	@ D.2884, tmp549,
+	ldr	r4, [fp, #-164]	@ tmp549, y
+	mov	r2, r4, asr r2	@ D.2884, tmp549,
 	ldr	r3, [fp, #-160]	@ tmp550, x
 	rsb	r3, r2, r3	@ tmp551, D.2884, tmp550
 	str	r3, [fp, #-40]	@ tmp551, x_new
@@ -1355,8 +1355,8 @@ rotational_mode:
 	add	r2, r3, #8	@ D.2885, tmp552,
 	ldr	r3, [fp, #-160]	@ tmp553, x
 	mov	r2, r3, asr r2	@ D.2886, tmp553,
-	ldr	r3, [fp, #-164]	@ tmp554, y
-	add	r3, r2, r3	@ tmp555, D.2886, tmp554
+	@ldr	r3, [fp, #-164]	@ tmp554, y
+	add	r3, r2, r4	@ tmp555, D.2886, tmp554
 	str	r3, [fp, #-36]	@ tmp555, y_new
 	ldr	r3, [fp, #-32]	@ tmp556, i
 	add	r3, r3, #8	@ D.2887, tmp556,
@@ -1385,8 +1385,8 @@ rotational_mode:
 	cmp	r3, #0	@ tmp568,
 	bge	.L50	@,
 	ldr	r2, [fp, #-164]	@ tmp569, y
-	ldr	r3, [fp, #-32]	@ tmp570, i
-	mov	r2, r2, asr r3	@ D.2889, tmp569,
+	ldr	r4, [fp, #-32]	@ tmp570, i
+	mov	r2, r2, asr r4	@ D.2889, tmp569,
 	ldr	r3, [fp, #-160]	@ tmp571, x
 	add	r3, r2, r3	@ tmp572, D.2889, tmp571
 	str	r3, [fp, #-40]	@ tmp572, x_new
@@ -1396,9 +1396,9 @@ rotational_mode:
 	ldr	r3, [fp, #-164]	@ tmp575, y
 	rsb	r3, r2, r3	@ tmp576, D.2890, tmp575
 	str	r3, [fp, #-36]	@ tmp576, y_new
-	ldr	r3, [fp, #-32]	@ i.8, i
+	@ldr	r3, [fp, #-32]	@ i.8, i
 	mvn	r2, #127	@ tmp577,
-	mov	r3, r3, asl #2	@ tmp578, i.8,
+	mov	r3, r4, asl #2	@ tmp578, i.8,
 	sub	r1, fp, #28	@,,
 	add	r3, r1, r3	@ tmp579,, tmp578
 	add	r3, r3, r2	@ tmp580, tmp579, tmp577
@@ -1440,8 +1440,8 @@ rotational_mode:
 	bge	.L52	@,
 	ldr	r3, [fp, #-32]	@ tmp600, i
 	add	r2, r3, #1	@ D.2897, tmp600,
-	ldr	r3, [fp, #-164]	@ tmp601, y
-	mov	r2, r3, asr r2	@ D.2898, tmp601,
+	ldr	r4, [fp, #-164]	@ tmp601, y
+	mov	r2, r4, asr r2	@ D.2898, tmp601,
 	ldr	r3, [fp, #-160]	@ tmp602, x
 	add	r3, r2, r3	@ tmp603, D.2898, tmp602
 	str	r3, [fp, #-40]	@ tmp603, x_new
@@ -1449,8 +1449,8 @@ rotational_mode:
 	add	r2, r3, #1	@ D.2899, tmp604,
 	ldr	r3, [fp, #-160]	@ tmp605, x
 	mov	r2, r3, asr r2	@ D.2900, tmp605,
-	ldr	r3, [fp, #-164]	@ tmp606, y
-	rsb	r3, r2, r3	@ tmp607, D.2900, tmp606
+	@ldr	r3, [fp, #-164]	@ tmp606, y
+	rsb	r3, r2, r4	@ tmp607, D.2900, tmp606
 	str	r3, [fp, #-36]	@ tmp607, y_new
 	ldr	r3, [fp, #-32]	@ tmp608, i
 	add	r3, r3, #1	@ D.2901, tmp608,
@@ -1467,17 +1467,17 @@ rotational_mode:
 .L52:
 	ldr	r3, [fp, #-32]	@ tmp615, i
 	add	r2, r3, #1	@ D.2903, tmp615,
-	ldr	r3, [fp, #-164]	@ tmp616, y
-	mov	r2, r3, asr r2	@ D.2904, tmp616,
-	ldr	r3, [fp, #-160]	@ tmp617, x
-	rsb	r3, r2, r3	@ tmp618, D.2904, tmp617
+	ldr	r4, [fp, #-164]	@ tmp616, y
+	mov	r2, r4, asr r2	@ D.2904, tmp616,
+	ldr	r5, [fp, #-160]	@ tmp617, x
+	rsb	r3, r2, r5	@ tmp618, D.2904, tmp617
 	str	r3, [fp, #-40]	@ tmp618, x_new
 	ldr	r3, [fp, #-32]	@ tmp619, i
 	add	r2, r3, #1	@ D.2905, tmp619,
-	ldr	r3, [fp, #-160]	@ tmp620, x
-	mov	r2, r3, asr r2	@ D.2906, tmp620,
-	ldr	r3, [fp, #-164]	@ tmp621, y
-	add	r3, r2, r3	@ tmp622, D.2906, tmp621
+	@ldr	r3, [fp, #-160]	@ tmp620, x
+	mov	r2, r5, asr r2	@ D.2906, tmp620,
+	@ldr	r3, [fp, #-164]	@ tmp621, y
+	add	r3, r2, r4	@ tmp622, D.2906, tmp621
 	str	r3, [fp, #-36]	@ tmp622, y_new
 	ldr	r3, [fp, #-32]	@ tmp623, i
 	add	r3, r3, #1	@ D.2907, tmp623,
@@ -1772,3 +1772,4 @@ main:
 	.size	main, .-main
 	.ident	"GCC: (Sourcery G++ Lite 2008q3-72) 4.3.2"
 	.section	.note.GNU-stack,"",%progbits
+
