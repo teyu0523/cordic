@@ -1,0 +1,2 @@
+vhdl work "cordic_rotation.vhd"
+vhdl work "cordic_rotation_testbench.vhd"

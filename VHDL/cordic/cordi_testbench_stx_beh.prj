@@ -1,0 +1,2 @@
+vhdl isim_temp "cordic.vhd"
+vhdl isim_temp "cordi_testbench.vhd"

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Owner/Documents/SENG 440/New folder/cordic/cordic_rotation_testbench_isim_beh.exe" -prj "C:/Users/Owner/Documents/SENG 440/New folder/cordic/cordic_rotation_testbench_beh.prj" "work.cordic_rotation_testbench" 

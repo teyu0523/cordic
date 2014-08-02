@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/Owner/Documents/SENG 440/New folder/cordic/cordic.xst" -ofn "C:/Users/Owner/Documents/SENG 440/New folder/cordic/cordic.syr" 
+xst -intstyle ise -ifn "C:/Users/Owner/Documents/SENG 440/New folder/cordic/cordic.xst" -ofn "C:/Users/Owner/Documents/SENG 440/New folder/cordic/cordic.syr" 
+xst -intstyle ise -ifn "C:/Users/Owner/Documents/SENG 440/New folder/cordic/cordic.xst" -ofn "C:/Users/Owner/Documents/SENG 440/New folder/cordic/cordic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa6slx75-fgg484-3 "cordic.ngc" cordic.ngd  
+map -intstyle ise -p xa6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cordic_map.ncd cordic.ngd cordic.pcf 
+map -intstyle ise -p xa6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cordic_map.ncd cordic.ngd cordic.pcf 

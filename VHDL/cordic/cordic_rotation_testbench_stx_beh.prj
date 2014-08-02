@@ -1,0 +1,2 @@
+vhdl isim_temp "cordic_rotation.vhd"
+vhdl isim_temp "cordic_rotation_testbench.vhd"

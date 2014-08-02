@@ -1,0 +1,2 @@
+vhdl work "cordic.vhd"
+vhdl work "cordi_testbench.vhd"

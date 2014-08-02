@@ -1,0 +1,1461 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Reading design: cordic.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cordic.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cordic"
+Output Format                      : NGC
+Target Device                      : xa6slx75-3-fgg484
+
+---- Source Options
+Top Module Name                    : cordic
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Owner\Documents\SENG 440\New folder\cordic\cordic.vhd" into library work
+Parsing entity <cordic>.
+Parsing architecture <Behavioral> of entity <cordic>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <cordic> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <cordic>.
+    Related source file is "c:/users/owner/documents/seng 440/new folder/cordic/cordic.vhd".
+    Found 32-bit adder for signal <x[31]_y[31]_add_1_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_3_OUT> created at line 71.
+    Found 32-bit adder for signal <x[31]_y[31]_add_11_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_13_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_15_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_21_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_23_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_25_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_31_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_33_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_35_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_41_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_43_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_45_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_51_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_53_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_55_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_61_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_63_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_65_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_71_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_73_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_75_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_81_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_83_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_85_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_91_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_93_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_95_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_101_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_103_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_105_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_111_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_113_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_115_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_121_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_123_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_125_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_131_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_133_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_135_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_141_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_143_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_145_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_151_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_153_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_155_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_161_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_163_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_165_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_171_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_173_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_175_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_181_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_183_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_185_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_191_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_193_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_195_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_201_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_203_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_205_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_211_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_213_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_215_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_221_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_223_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_225_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_231_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_233_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_235_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_241_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_243_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_245_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_251_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_253_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_255_OUT> created at line 74.
+    Found 32-bit adder for signal <x[31]_y[31]_add_261_OUT> created at line 69.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_263_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_265_OUT> created at line 74.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_273_OUT> created at line 71.
+    Found 32-bit adder for signal <y[31]_x[31]_add_275_OUT> created at line 74.
+    Found 32-bit adder for signal <z[31]_GND_4_o_add_283_OUT> created at line 71.
+    Found 10-bit adder for signal <n0318[9:0]> created at line 57.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_3_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_5_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_7_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_13_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_15_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_17_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_23_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_25_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_27_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_33_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_35_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_37_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_43_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_45_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_47_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_53_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_55_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_57_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_63_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_65_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_67_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_73_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_75_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_77_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_83_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_85_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_87_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_93_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_95_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_97_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_103_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_105_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_107_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_113_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_115_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_117_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_123_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_125_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_127_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_133_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_135_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_137_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_143_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_145_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_147_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_153_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_155_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_157_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_163_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_165_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_167_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_173_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_175_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_177_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_183_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_185_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_187_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_193_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_195_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_197_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_203_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_205_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_207_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_213_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_215_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_217_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_223_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_225_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_227_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_233_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_235_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_237_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_243_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_245_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_247_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_253_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_255_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_257_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_263_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <x[31]_y[31]_sub_265_OUT<31:0>> created at line 73.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_267_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <y[31]_x[31]_sub_273_OUT<31:0>> created at line 70.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_277_OUT<31:0>> created at line 75.
+    Found 32-bit subtractor for signal <z[31]_GND_4_o_sub_287_OUT<31:0>> created at line 75.
+    Found 32-bit comparator lessequal for signal <n0000> created at line 68
+    Found 32-bit comparator lessequal for signal <n0011> created at line 68
+    Found 32-bit comparator lessequal for signal <n0022> created at line 68
+    Found 32-bit comparator lessequal for signal <n0033> created at line 68
+    Found 32-bit comparator lessequal for signal <n0044> created at line 68
+    Found 32-bit comparator lessequal for signal <n0055> created at line 68
+    Found 32-bit comparator lessequal for signal <n0066> created at line 68
+    Found 32-bit comparator lessequal for signal <n0077> created at line 68
+    Found 32-bit comparator lessequal for signal <n0088> created at line 68
+    Found 32-bit comparator lessequal for signal <n0099> created at line 68
+    Found 32-bit comparator lessequal for signal <n0110> created at line 68
+    Found 32-bit comparator lessequal for signal <n0121> created at line 68
+    Found 32-bit comparator lessequal for signal <n0132> created at line 68
+    Found 32-bit comparator lessequal for signal <n0143> created at line 68
+    Found 32-bit comparator lessequal for signal <n0154> created at line 68
+    Found 32-bit comparator lessequal for signal <n0165> created at line 68
+    Found 32-bit comparator lessequal for signal <n0176> created at line 68
+    Found 32-bit comparator lessequal for signal <n0187> created at line 68
+    Found 32-bit comparator lessequal for signal <n0198> created at line 68
+    Found 32-bit comparator lessequal for signal <n0209> created at line 68
+    Found 32-bit comparator lessequal for signal <n0220> created at line 68
+    Found 32-bit comparator lessequal for signal <n0231> created at line 68
+    Found 32-bit comparator lessequal for signal <n0242> created at line 68
+    Found 32-bit comparator lessequal for signal <n0253> created at line 68
+    Found 32-bit comparator lessequal for signal <n0264> created at line 68
+    Found 32-bit comparator lessequal for signal <n0275> created at line 68
+    Found 32-bit comparator lessequal for signal <n0286> created at line 68
+    Found 32-bit comparator lessequal for signal <n0297> created at line 68
+    Found 32-bit comparator lessequal for signal <n0305> created at line 68
+    Summary:
+	inferred  85 Adder/Subtractor(s).
+	inferred  29 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <cordic> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 85
+ 10-bit adder                                          : 1
+ 32-bit addsub                                         : 84
+# Comparators                                          : 29
+ 32-bit comparator lessequal                           : 29
+# Multiplexers                                         : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 84
+ 10-bit adder                                          : 1
+ 32-bit addsub                                         : 82
+ 32-bit addsub carry/borrow in                         : 1
+# Comparators                                          : 29
+ 32-bit comparator lessequal                           : 29
+# Multiplexers                                         : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <cordic> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block cordic, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : cordic.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 7871
+#      INV                         : 57
+#      LUT1                        : 378
+#      LUT2                        : 897
+#      LUT3                        : 1356
+#      LUT4                        : 3
+#      LUT5                        : 2
+#      LUT6                        : 7
+#      MUXCY                       : 2573
+#      XORCY                       : 2598
+# IO Buffers                       : 128
+#      IBUF                        : 96
+#      OBUF                        : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa6slx75fgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                 2700  out of  46648     5%  
+    Number used as Logic:              2700  out of  46648     5%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2700
+   Number with an unused Flip Flop:    2700  out of   2700   100%  
+   Number with an unused LUT:             0  out of   2700     0%  
+   Number of fully used LUT-FF pairs:     0  out of   2700     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                         192
+ Number of bonded IOBs:                 128  out of    280    45%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 104.729ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1523558215117695000000000000000000000000000000000000000000 / 32
+-------------------------------------------------------------------------
+Delay:               104.729ns (Levels of Logic = 953)
+  Source:            y<31> (PAD)
+  Destination:       vector_result<31> (PAD)
+
+  Data Path: y<31> to vector_result<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            97   1.222   1.857  y_31_IBUF (y[31]_GND_4_o_LessThan_1_o_inv1)
+     INV:I->O              1   0.206   0.579  _n1185_inv2_INV_0 (_n1185_inv)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<0> (Mmux_n0835_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<1> (Mmux_n0835_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<2> (Mmux_n0835_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<3> (Mmux_n0835_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<4> (Mmux_n0835_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<5> (Mmux_n0835_rs_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<6> (Mmux_n0835_rs_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<7> (Mmux_n0835_rs_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<8> (Mmux_n0835_rs_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<9> (Mmux_n0835_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<10> (Mmux_n0835_rs_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<11> (Mmux_n0835_rs_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<12> (Mmux_n0835_rs_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<13> (Mmux_n0835_rs_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<14> (Mmux_n0835_rs_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<15> (Mmux_n0835_rs_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<16> (Mmux_n0835_rs_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<17> (Mmux_n0835_rs_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<18> (Mmux_n0835_rs_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<19> (Mmux_n0835_rs_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<20> (Mmux_n0835_rs_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<21> (Mmux_n0835_rs_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<22> (Mmux_n0835_rs_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<23> (Mmux_n0835_rs_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<24> (Mmux_n0835_rs_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<25> (Mmux_n0835_rs_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<26> (Mmux_n0835_rs_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<27> (Mmux_n0835_rs_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<28> (Mmux_n0835_rs_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_n0835_rs_cy<29> (Mmux_n0835_rs_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Mmux_n0835_rs_cy<30> (Mmux_n0835_rs_cy<30>)
+     XORCY:CI->O          96   0.180   1.850  Mmux_n0835_rs_xor<31> (y[31]_GND_4_o_LessThan_11_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_11_o2_INV_0 (y[31]_GND_4_o_LessThan_11_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<0> (Maddsub_n0843_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<1> (Maddsub_n0843_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<2> (Maddsub_n0843_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<3> (Maddsub_n0843_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<4> (Maddsub_n0843_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<5> (Maddsub_n0843_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<6> (Maddsub_n0843_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<7> (Maddsub_n0843_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<8> (Maddsub_n0843_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<9> (Maddsub_n0843_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<10> (Maddsub_n0843_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<11> (Maddsub_n0843_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<12> (Maddsub_n0843_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<13> (Maddsub_n0843_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<14> (Maddsub_n0843_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<15> (Maddsub_n0843_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<16> (Maddsub_n0843_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<17> (Maddsub_n0843_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<18> (Maddsub_n0843_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<19> (Maddsub_n0843_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<20> (Maddsub_n0843_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<21> (Maddsub_n0843_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<22> (Maddsub_n0843_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<23> (Maddsub_n0843_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<24> (Maddsub_n0843_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<25> (Maddsub_n0843_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<26> (Maddsub_n0843_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<27> (Maddsub_n0843_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<28> (Maddsub_n0843_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0843_cy<29> (Maddsub_n0843_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0843_cy<30> (Maddsub_n0843_cy<30>)
+     XORCY:CI->O          95   0.180   1.844  Maddsub_n0843_xor<31> (y[31]_GND_4_o_LessThan_21_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_21_o2_INV_0 (y[31]_GND_4_o_LessThan_21_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<0> (Maddsub_n0851_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<1> (Maddsub_n0851_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<2> (Maddsub_n0851_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<3> (Maddsub_n0851_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<4> (Maddsub_n0851_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<5> (Maddsub_n0851_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<6> (Maddsub_n0851_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<7> (Maddsub_n0851_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<8> (Maddsub_n0851_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<9> (Maddsub_n0851_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<10> (Maddsub_n0851_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<11> (Maddsub_n0851_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<12> (Maddsub_n0851_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<13> (Maddsub_n0851_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<14> (Maddsub_n0851_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<15> (Maddsub_n0851_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<16> (Maddsub_n0851_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<17> (Maddsub_n0851_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<18> (Maddsub_n0851_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<19> (Maddsub_n0851_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<20> (Maddsub_n0851_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<21> (Maddsub_n0851_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<22> (Maddsub_n0851_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<23> (Maddsub_n0851_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<24> (Maddsub_n0851_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<25> (Maddsub_n0851_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<26> (Maddsub_n0851_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<27> (Maddsub_n0851_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<28> (Maddsub_n0851_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0851_cy<29> (Maddsub_n0851_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0851_cy<30> (Maddsub_n0851_cy<30>)
+     XORCY:CI->O          94   0.180   1.837  Maddsub_n0851_xor<31> (y[31]_GND_4_o_LessThan_31_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_31_o2_INV_0 (y[31]_GND_4_o_LessThan_31_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<0> (Maddsub_n0859_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<1> (Maddsub_n0859_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<2> (Maddsub_n0859_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<3> (Maddsub_n0859_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<4> (Maddsub_n0859_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<5> (Maddsub_n0859_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<6> (Maddsub_n0859_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<7> (Maddsub_n0859_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<8> (Maddsub_n0859_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<9> (Maddsub_n0859_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<10> (Maddsub_n0859_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<11> (Maddsub_n0859_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<12> (Maddsub_n0859_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<13> (Maddsub_n0859_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<14> (Maddsub_n0859_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<15> (Maddsub_n0859_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<16> (Maddsub_n0859_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<17> (Maddsub_n0859_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<18> (Maddsub_n0859_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<19> (Maddsub_n0859_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<20> (Maddsub_n0859_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<21> (Maddsub_n0859_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<22> (Maddsub_n0859_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<23> (Maddsub_n0859_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<24> (Maddsub_n0859_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<25> (Maddsub_n0859_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<26> (Maddsub_n0859_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<27> (Maddsub_n0859_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<28> (Maddsub_n0859_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0859_cy<29> (Maddsub_n0859_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0859_cy<30> (Maddsub_n0859_cy<30>)
+     XORCY:CI->O          93   0.180   1.831  Maddsub_n0859_xor<31> (y[31]_GND_4_o_LessThan_41_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_41_o2_INV_0 (y[31]_GND_4_o_LessThan_41_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<0> (Maddsub_n0867_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<1> (Maddsub_n0867_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<2> (Maddsub_n0867_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<3> (Maddsub_n0867_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<4> (Maddsub_n0867_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<5> (Maddsub_n0867_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<6> (Maddsub_n0867_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<7> (Maddsub_n0867_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<8> (Maddsub_n0867_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<9> (Maddsub_n0867_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<10> (Maddsub_n0867_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<11> (Maddsub_n0867_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<12> (Maddsub_n0867_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<13> (Maddsub_n0867_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<14> (Maddsub_n0867_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<15> (Maddsub_n0867_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<16> (Maddsub_n0867_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<17> (Maddsub_n0867_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<18> (Maddsub_n0867_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<19> (Maddsub_n0867_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<20> (Maddsub_n0867_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<21> (Maddsub_n0867_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<22> (Maddsub_n0867_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<23> (Maddsub_n0867_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<24> (Maddsub_n0867_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<25> (Maddsub_n0867_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<26> (Maddsub_n0867_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<27> (Maddsub_n0867_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<28> (Maddsub_n0867_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0867_cy<29> (Maddsub_n0867_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0867_cy<30> (Maddsub_n0867_cy<30>)
+     XORCY:CI->O          92   0.180   1.824  Maddsub_n0867_xor<31> (y[31]_GND_4_o_LessThan_51_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_51_o2_INV_0 (y[31]_GND_4_o_LessThan_51_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<0> (Maddsub_n0875_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<1> (Maddsub_n0875_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<2> (Maddsub_n0875_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<3> (Maddsub_n0875_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<4> (Maddsub_n0875_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<5> (Maddsub_n0875_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<6> (Maddsub_n0875_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<7> (Maddsub_n0875_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<8> (Maddsub_n0875_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<9> (Maddsub_n0875_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<10> (Maddsub_n0875_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<11> (Maddsub_n0875_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<12> (Maddsub_n0875_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<13> (Maddsub_n0875_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<14> (Maddsub_n0875_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<15> (Maddsub_n0875_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<16> (Maddsub_n0875_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<17> (Maddsub_n0875_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<18> (Maddsub_n0875_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<19> (Maddsub_n0875_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<20> (Maddsub_n0875_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<21> (Maddsub_n0875_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<22> (Maddsub_n0875_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<23> (Maddsub_n0875_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<24> (Maddsub_n0875_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<25> (Maddsub_n0875_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<26> (Maddsub_n0875_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<27> (Maddsub_n0875_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<28> (Maddsub_n0875_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0875_cy<29> (Maddsub_n0875_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0875_cy<30> (Maddsub_n0875_cy<30>)
+     XORCY:CI->O          91   0.180   1.817  Maddsub_n0875_xor<31> (y[31]_GND_4_o_LessThan_61_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_61_o2_INV_0 (y[31]_GND_4_o_LessThan_61_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<0> (Maddsub_n0883_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<1> (Maddsub_n0883_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<2> (Maddsub_n0883_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<3> (Maddsub_n0883_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<4> (Maddsub_n0883_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<5> (Maddsub_n0883_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<6> (Maddsub_n0883_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<7> (Maddsub_n0883_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<8> (Maddsub_n0883_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<9> (Maddsub_n0883_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<10> (Maddsub_n0883_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<11> (Maddsub_n0883_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<12> (Maddsub_n0883_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<13> (Maddsub_n0883_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<14> (Maddsub_n0883_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<15> (Maddsub_n0883_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<16> (Maddsub_n0883_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<17> (Maddsub_n0883_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<18> (Maddsub_n0883_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<19> (Maddsub_n0883_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<20> (Maddsub_n0883_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<21> (Maddsub_n0883_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<22> (Maddsub_n0883_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<23> (Maddsub_n0883_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<24> (Maddsub_n0883_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<25> (Maddsub_n0883_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<26> (Maddsub_n0883_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<27> (Maddsub_n0883_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<28> (Maddsub_n0883_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0883_cy<29> (Maddsub_n0883_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0883_cy<30> (Maddsub_n0883_cy<30>)
+     XORCY:CI->O          90   0.180   1.811  Maddsub_n0883_xor<31> (y[31]_GND_4_o_LessThan_71_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_71_o2_INV_0 (y[31]_GND_4_o_LessThan_71_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<0> (Maddsub_n0891_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<1> (Maddsub_n0891_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<2> (Maddsub_n0891_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<3> (Maddsub_n0891_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<4> (Maddsub_n0891_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<5> (Maddsub_n0891_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<6> (Maddsub_n0891_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<7> (Maddsub_n0891_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<8> (Maddsub_n0891_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<9> (Maddsub_n0891_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<10> (Maddsub_n0891_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<11> (Maddsub_n0891_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<12> (Maddsub_n0891_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<13> (Maddsub_n0891_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<14> (Maddsub_n0891_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<15> (Maddsub_n0891_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<16> (Maddsub_n0891_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<17> (Maddsub_n0891_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<18> (Maddsub_n0891_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<19> (Maddsub_n0891_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<20> (Maddsub_n0891_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<21> (Maddsub_n0891_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<22> (Maddsub_n0891_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<23> (Maddsub_n0891_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<24> (Maddsub_n0891_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<25> (Maddsub_n0891_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<26> (Maddsub_n0891_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<27> (Maddsub_n0891_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<28> (Maddsub_n0891_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0891_cy<29> (Maddsub_n0891_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0891_cy<30> (Maddsub_n0891_cy<30>)
+     XORCY:CI->O          89   0.180   1.804  Maddsub_n0891_xor<31> (y[31]_GND_4_o_LessThan_81_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_81_o2_INV_0 (y[31]_GND_4_o_LessThan_81_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<0> (Maddsub_n0899_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<1> (Maddsub_n0899_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<2> (Maddsub_n0899_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<3> (Maddsub_n0899_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<4> (Maddsub_n0899_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<5> (Maddsub_n0899_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<6> (Maddsub_n0899_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<7> (Maddsub_n0899_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<8> (Maddsub_n0899_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<9> (Maddsub_n0899_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<10> (Maddsub_n0899_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<11> (Maddsub_n0899_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<12> (Maddsub_n0899_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<13> (Maddsub_n0899_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<14> (Maddsub_n0899_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<15> (Maddsub_n0899_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<16> (Maddsub_n0899_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<17> (Maddsub_n0899_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<18> (Maddsub_n0899_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<19> (Maddsub_n0899_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<20> (Maddsub_n0899_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<21> (Maddsub_n0899_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<22> (Maddsub_n0899_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<23> (Maddsub_n0899_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<24> (Maddsub_n0899_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<25> (Maddsub_n0899_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<26> (Maddsub_n0899_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<27> (Maddsub_n0899_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<28> (Maddsub_n0899_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0899_cy<29> (Maddsub_n0899_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0899_cy<30> (Maddsub_n0899_cy<30>)
+     XORCY:CI->O          88   0.180   1.798  Maddsub_n0899_xor<31> (y[31]_GND_4_o_LessThan_91_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_91_o2_INV_0 (y[31]_GND_4_o_LessThan_91_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<0> (Maddsub_n0907_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<1> (Maddsub_n0907_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<2> (Maddsub_n0907_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<3> (Maddsub_n0907_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<4> (Maddsub_n0907_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<5> (Maddsub_n0907_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<6> (Maddsub_n0907_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<7> (Maddsub_n0907_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<8> (Maddsub_n0907_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<9> (Maddsub_n0907_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<10> (Maddsub_n0907_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<11> (Maddsub_n0907_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<12> (Maddsub_n0907_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<13> (Maddsub_n0907_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<14> (Maddsub_n0907_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<15> (Maddsub_n0907_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<16> (Maddsub_n0907_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<17> (Maddsub_n0907_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<18> (Maddsub_n0907_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<19> (Maddsub_n0907_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<20> (Maddsub_n0907_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<21> (Maddsub_n0907_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<22> (Maddsub_n0907_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<23> (Maddsub_n0907_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<24> (Maddsub_n0907_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<25> (Maddsub_n0907_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<26> (Maddsub_n0907_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<27> (Maddsub_n0907_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<28> (Maddsub_n0907_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0907_cy<29> (Maddsub_n0907_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0907_cy<30> (Maddsub_n0907_cy<30>)
+     XORCY:CI->O          87   0.180   1.791  Maddsub_n0907_xor<31> (y[31]_GND_4_o_LessThan_101_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_101_o2_INV_0 (y[31]_GND_4_o_LessThan_101_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<0> (Maddsub_n0915_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<1> (Maddsub_n0915_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<2> (Maddsub_n0915_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<3> (Maddsub_n0915_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<4> (Maddsub_n0915_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<5> (Maddsub_n0915_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<6> (Maddsub_n0915_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<7> (Maddsub_n0915_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<8> (Maddsub_n0915_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<9> (Maddsub_n0915_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<10> (Maddsub_n0915_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<11> (Maddsub_n0915_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<12> (Maddsub_n0915_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<13> (Maddsub_n0915_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<14> (Maddsub_n0915_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<15> (Maddsub_n0915_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<16> (Maddsub_n0915_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<17> (Maddsub_n0915_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<18> (Maddsub_n0915_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<19> (Maddsub_n0915_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<20> (Maddsub_n0915_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<21> (Maddsub_n0915_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<22> (Maddsub_n0915_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<23> (Maddsub_n0915_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<24> (Maddsub_n0915_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<25> (Maddsub_n0915_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<26> (Maddsub_n0915_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<27> (Maddsub_n0915_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<28> (Maddsub_n0915_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0915_cy<29> (Maddsub_n0915_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0915_cy<30> (Maddsub_n0915_cy<30>)
+     XORCY:CI->O          86   0.180   1.784  Maddsub_n0915_xor<31> (y[31]_GND_4_o_LessThan_111_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_111_o2_INV_0 (y[31]_GND_4_o_LessThan_111_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<0> (Maddsub_n0923_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<1> (Maddsub_n0923_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<2> (Maddsub_n0923_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<3> (Maddsub_n0923_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<4> (Maddsub_n0923_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<5> (Maddsub_n0923_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<6> (Maddsub_n0923_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<7> (Maddsub_n0923_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<8> (Maddsub_n0923_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<9> (Maddsub_n0923_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<10> (Maddsub_n0923_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<11> (Maddsub_n0923_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<12> (Maddsub_n0923_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<13> (Maddsub_n0923_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<14> (Maddsub_n0923_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<15> (Maddsub_n0923_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<16> (Maddsub_n0923_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<17> (Maddsub_n0923_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<18> (Maddsub_n0923_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<19> (Maddsub_n0923_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<20> (Maddsub_n0923_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<21> (Maddsub_n0923_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<22> (Maddsub_n0923_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<23> (Maddsub_n0923_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<24> (Maddsub_n0923_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<25> (Maddsub_n0923_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<26> (Maddsub_n0923_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<27> (Maddsub_n0923_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<28> (Maddsub_n0923_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0923_cy<29> (Maddsub_n0923_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0923_cy<30> (Maddsub_n0923_cy<30>)
+     XORCY:CI->O          85   0.180   1.778  Maddsub_n0923_xor<31> (y[31]_GND_4_o_LessThan_121_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_121_o2_INV_0 (y[31]_GND_4_o_LessThan_121_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<0> (Maddsub_n0931_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<1> (Maddsub_n0931_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<2> (Maddsub_n0931_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<3> (Maddsub_n0931_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<4> (Maddsub_n0931_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<5> (Maddsub_n0931_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<6> (Maddsub_n0931_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<7> (Maddsub_n0931_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<8> (Maddsub_n0931_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<9> (Maddsub_n0931_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<10> (Maddsub_n0931_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<11> (Maddsub_n0931_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<12> (Maddsub_n0931_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<13> (Maddsub_n0931_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<14> (Maddsub_n0931_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<15> (Maddsub_n0931_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<16> (Maddsub_n0931_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<17> (Maddsub_n0931_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<18> (Maddsub_n0931_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<19> (Maddsub_n0931_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<20> (Maddsub_n0931_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<21> (Maddsub_n0931_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<22> (Maddsub_n0931_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<23> (Maddsub_n0931_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<24> (Maddsub_n0931_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<25> (Maddsub_n0931_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<26> (Maddsub_n0931_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<27> (Maddsub_n0931_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<28> (Maddsub_n0931_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0931_cy<29> (Maddsub_n0931_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0931_cy<30> (Maddsub_n0931_cy<30>)
+     XORCY:CI->O          84   0.180   1.771  Maddsub_n0931_xor<31> (y[31]_GND_4_o_LessThan_131_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_131_o2_INV_0 (y[31]_GND_4_o_LessThan_131_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<0> (Maddsub_n0939_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<1> (Maddsub_n0939_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<2> (Maddsub_n0939_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<3> (Maddsub_n0939_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<4> (Maddsub_n0939_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<5> (Maddsub_n0939_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<6> (Maddsub_n0939_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<7> (Maddsub_n0939_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<8> (Maddsub_n0939_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<9> (Maddsub_n0939_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<10> (Maddsub_n0939_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<11> (Maddsub_n0939_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<12> (Maddsub_n0939_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<13> (Maddsub_n0939_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<14> (Maddsub_n0939_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<15> (Maddsub_n0939_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<16> (Maddsub_n0939_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<17> (Maddsub_n0939_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<18> (Maddsub_n0939_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<19> (Maddsub_n0939_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<20> (Maddsub_n0939_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<21> (Maddsub_n0939_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<22> (Maddsub_n0939_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<23> (Maddsub_n0939_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<24> (Maddsub_n0939_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<25> (Maddsub_n0939_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<26> (Maddsub_n0939_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<27> (Maddsub_n0939_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<28> (Maddsub_n0939_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0939_cy<29> (Maddsub_n0939_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0939_cy<30> (Maddsub_n0939_cy<30>)
+     XORCY:CI->O          83   0.180   1.765  Maddsub_n0939_xor<31> (y[31]_GND_4_o_LessThan_141_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_141_o2_INV_0 (y[31]_GND_4_o_LessThan_141_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<0> (Maddsub_n0947_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<1> (Maddsub_n0947_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<2> (Maddsub_n0947_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<3> (Maddsub_n0947_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<4> (Maddsub_n0947_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<5> (Maddsub_n0947_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<6> (Maddsub_n0947_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<7> (Maddsub_n0947_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<8> (Maddsub_n0947_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<9> (Maddsub_n0947_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<10> (Maddsub_n0947_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<11> (Maddsub_n0947_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<12> (Maddsub_n0947_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<13> (Maddsub_n0947_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<14> (Maddsub_n0947_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<15> (Maddsub_n0947_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<16> (Maddsub_n0947_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<17> (Maddsub_n0947_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<18> (Maddsub_n0947_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<19> (Maddsub_n0947_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<20> (Maddsub_n0947_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<21> (Maddsub_n0947_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<22> (Maddsub_n0947_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<23> (Maddsub_n0947_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<24> (Maddsub_n0947_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<25> (Maddsub_n0947_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<26> (Maddsub_n0947_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<27> (Maddsub_n0947_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<28> (Maddsub_n0947_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0947_cy<29> (Maddsub_n0947_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0947_cy<30> (Maddsub_n0947_cy<30>)
+     XORCY:CI->O          82   0.180   1.758  Maddsub_n0947_xor<31> (y[31]_GND_4_o_LessThan_151_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_151_o2_INV_0 (y[31]_GND_4_o_LessThan_151_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<0> (Maddsub_n0955_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<1> (Maddsub_n0955_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<2> (Maddsub_n0955_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<3> (Maddsub_n0955_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<4> (Maddsub_n0955_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<5> (Maddsub_n0955_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<6> (Maddsub_n0955_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<7> (Maddsub_n0955_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<8> (Maddsub_n0955_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<9> (Maddsub_n0955_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<10> (Maddsub_n0955_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<11> (Maddsub_n0955_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<12> (Maddsub_n0955_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<13> (Maddsub_n0955_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<14> (Maddsub_n0955_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<15> (Maddsub_n0955_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<16> (Maddsub_n0955_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<17> (Maddsub_n0955_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<18> (Maddsub_n0955_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<19> (Maddsub_n0955_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<20> (Maddsub_n0955_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<21> (Maddsub_n0955_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<22> (Maddsub_n0955_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<23> (Maddsub_n0955_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<24> (Maddsub_n0955_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<25> (Maddsub_n0955_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<26> (Maddsub_n0955_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<27> (Maddsub_n0955_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<28> (Maddsub_n0955_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0955_cy<29> (Maddsub_n0955_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0955_cy<30> (Maddsub_n0955_cy<30>)
+     XORCY:CI->O          81   0.180   1.751  Maddsub_n0955_xor<31> (y[31]_GND_4_o_LessThan_161_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_161_o2_INV_0 (y[31]_GND_4_o_LessThan_161_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<0> (Maddsub_n0963_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<1> (Maddsub_n0963_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<2> (Maddsub_n0963_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<3> (Maddsub_n0963_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<4> (Maddsub_n0963_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<5> (Maddsub_n0963_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<6> (Maddsub_n0963_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<7> (Maddsub_n0963_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<8> (Maddsub_n0963_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<9> (Maddsub_n0963_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<10> (Maddsub_n0963_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<11> (Maddsub_n0963_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<12> (Maddsub_n0963_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<13> (Maddsub_n0963_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<14> (Maddsub_n0963_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<15> (Maddsub_n0963_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<16> (Maddsub_n0963_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<17> (Maddsub_n0963_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<18> (Maddsub_n0963_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<19> (Maddsub_n0963_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<20> (Maddsub_n0963_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<21> (Maddsub_n0963_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<22> (Maddsub_n0963_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<23> (Maddsub_n0963_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<24> (Maddsub_n0963_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<25> (Maddsub_n0963_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<26> (Maddsub_n0963_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<27> (Maddsub_n0963_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<28> (Maddsub_n0963_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0963_cy<29> (Maddsub_n0963_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0963_cy<30> (Maddsub_n0963_cy<30>)
+     XORCY:CI->O          80   0.180   1.745  Maddsub_n0963_xor<31> (y[31]_GND_4_o_LessThan_171_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_171_o2_INV_0 (y[31]_GND_4_o_LessThan_171_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<0> (Maddsub_n0971_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<1> (Maddsub_n0971_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<2> (Maddsub_n0971_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<3> (Maddsub_n0971_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<4> (Maddsub_n0971_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<5> (Maddsub_n0971_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<6> (Maddsub_n0971_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<7> (Maddsub_n0971_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<8> (Maddsub_n0971_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<9> (Maddsub_n0971_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<10> (Maddsub_n0971_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<11> (Maddsub_n0971_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<12> (Maddsub_n0971_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<13> (Maddsub_n0971_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<14> (Maddsub_n0971_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<15> (Maddsub_n0971_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<16> (Maddsub_n0971_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<17> (Maddsub_n0971_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<18> (Maddsub_n0971_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<19> (Maddsub_n0971_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<20> (Maddsub_n0971_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<21> (Maddsub_n0971_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<22> (Maddsub_n0971_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<23> (Maddsub_n0971_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<24> (Maddsub_n0971_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<25> (Maddsub_n0971_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<26> (Maddsub_n0971_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<27> (Maddsub_n0971_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<28> (Maddsub_n0971_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0971_cy<29> (Maddsub_n0971_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0971_cy<30> (Maddsub_n0971_cy<30>)
+     XORCY:CI->O          79   0.180   1.738  Maddsub_n0971_xor<31> (y[31]_GND_4_o_LessThan_181_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_181_o2_INV_0 (y[31]_GND_4_o_LessThan_181_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<0> (Maddsub_n0979_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<1> (Maddsub_n0979_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<2> (Maddsub_n0979_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<3> (Maddsub_n0979_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<4> (Maddsub_n0979_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<5> (Maddsub_n0979_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<6> (Maddsub_n0979_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<7> (Maddsub_n0979_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<8> (Maddsub_n0979_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<9> (Maddsub_n0979_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<10> (Maddsub_n0979_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<11> (Maddsub_n0979_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<12> (Maddsub_n0979_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<13> (Maddsub_n0979_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<14> (Maddsub_n0979_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<15> (Maddsub_n0979_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<16> (Maddsub_n0979_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<17> (Maddsub_n0979_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<18> (Maddsub_n0979_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<19> (Maddsub_n0979_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<20> (Maddsub_n0979_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<21> (Maddsub_n0979_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<22> (Maddsub_n0979_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<23> (Maddsub_n0979_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<24> (Maddsub_n0979_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<25> (Maddsub_n0979_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<26> (Maddsub_n0979_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<27> (Maddsub_n0979_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<28> (Maddsub_n0979_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0979_cy<29> (Maddsub_n0979_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0979_cy<30> (Maddsub_n0979_cy<30>)
+     XORCY:CI->O          78   0.180   1.732  Maddsub_n0979_xor<31> (y[31]_GND_4_o_LessThan_191_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_191_o2_INV_0 (y[31]_GND_4_o_LessThan_191_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<0> (Maddsub_n0987_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<1> (Maddsub_n0987_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<2> (Maddsub_n0987_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<3> (Maddsub_n0987_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<4> (Maddsub_n0987_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<5> (Maddsub_n0987_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<6> (Maddsub_n0987_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<7> (Maddsub_n0987_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<8> (Maddsub_n0987_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<9> (Maddsub_n0987_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<10> (Maddsub_n0987_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<11> (Maddsub_n0987_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<12> (Maddsub_n0987_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<13> (Maddsub_n0987_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<14> (Maddsub_n0987_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<15> (Maddsub_n0987_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<16> (Maddsub_n0987_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<17> (Maddsub_n0987_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<18> (Maddsub_n0987_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<19> (Maddsub_n0987_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<20> (Maddsub_n0987_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<21> (Maddsub_n0987_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<22> (Maddsub_n0987_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<23> (Maddsub_n0987_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<24> (Maddsub_n0987_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<25> (Maddsub_n0987_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<26> (Maddsub_n0987_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<27> (Maddsub_n0987_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<28> (Maddsub_n0987_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0987_cy<29> (Maddsub_n0987_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0987_cy<30> (Maddsub_n0987_cy<30>)
+     XORCY:CI->O          77   0.180   1.725  Maddsub_n0987_xor<31> (y[31]_GND_4_o_LessThan_201_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_201_o2_INV_0 (y[31]_GND_4_o_LessThan_201_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<0> (Maddsub_n0995_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<1> (Maddsub_n0995_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<2> (Maddsub_n0995_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<3> (Maddsub_n0995_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<4> (Maddsub_n0995_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<5> (Maddsub_n0995_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<6> (Maddsub_n0995_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<7> (Maddsub_n0995_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<8> (Maddsub_n0995_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<9> (Maddsub_n0995_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<10> (Maddsub_n0995_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<11> (Maddsub_n0995_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<12> (Maddsub_n0995_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<13> (Maddsub_n0995_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<14> (Maddsub_n0995_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<15> (Maddsub_n0995_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<16> (Maddsub_n0995_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<17> (Maddsub_n0995_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<18> (Maddsub_n0995_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<19> (Maddsub_n0995_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<20> (Maddsub_n0995_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<21> (Maddsub_n0995_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<22> (Maddsub_n0995_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<23> (Maddsub_n0995_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<24> (Maddsub_n0995_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<25> (Maddsub_n0995_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<26> (Maddsub_n0995_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<27> (Maddsub_n0995_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<28> (Maddsub_n0995_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n0995_cy<29> (Maddsub_n0995_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n0995_cy<30> (Maddsub_n0995_cy<30>)
+     XORCY:CI->O          76   0.180   1.718  Maddsub_n0995_xor<31> (y[31]_GND_4_o_LessThan_211_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_211_o2_INV_0 (y[31]_GND_4_o_LessThan_211_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<0> (Maddsub_n1003_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<1> (Maddsub_n1003_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<2> (Maddsub_n1003_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<3> (Maddsub_n1003_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<4> (Maddsub_n1003_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<5> (Maddsub_n1003_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<6> (Maddsub_n1003_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<7> (Maddsub_n1003_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<8> (Maddsub_n1003_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<9> (Maddsub_n1003_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<10> (Maddsub_n1003_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<11> (Maddsub_n1003_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<12> (Maddsub_n1003_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<13> (Maddsub_n1003_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<14> (Maddsub_n1003_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<15> (Maddsub_n1003_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<16> (Maddsub_n1003_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<17> (Maddsub_n1003_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<18> (Maddsub_n1003_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<19> (Maddsub_n1003_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<20> (Maddsub_n1003_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<21> (Maddsub_n1003_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<22> (Maddsub_n1003_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<23> (Maddsub_n1003_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<24> (Maddsub_n1003_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<25> (Maddsub_n1003_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<26> (Maddsub_n1003_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<27> (Maddsub_n1003_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<28> (Maddsub_n1003_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1003_cy<29> (Maddsub_n1003_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n1003_cy<30> (Maddsub_n1003_cy<30>)
+     XORCY:CI->O          75   0.180   1.712  Maddsub_n1003_xor<31> (y[31]_GND_4_o_LessThan_221_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_221_o2_INV_0 (y[31]_GND_4_o_LessThan_221_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<0> (Maddsub_n1011_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<1> (Maddsub_n1011_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<2> (Maddsub_n1011_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<3> (Maddsub_n1011_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<4> (Maddsub_n1011_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<5> (Maddsub_n1011_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<6> (Maddsub_n1011_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<7> (Maddsub_n1011_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<8> (Maddsub_n1011_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<9> (Maddsub_n1011_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<10> (Maddsub_n1011_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<11> (Maddsub_n1011_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<12> (Maddsub_n1011_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<13> (Maddsub_n1011_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<14> (Maddsub_n1011_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<15> (Maddsub_n1011_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<16> (Maddsub_n1011_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<17> (Maddsub_n1011_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<18> (Maddsub_n1011_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<19> (Maddsub_n1011_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<20> (Maddsub_n1011_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<21> (Maddsub_n1011_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<22> (Maddsub_n1011_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<23> (Maddsub_n1011_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<24> (Maddsub_n1011_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<25> (Maddsub_n1011_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<26> (Maddsub_n1011_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<27> (Maddsub_n1011_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<28> (Maddsub_n1011_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1011_cy<29> (Maddsub_n1011_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n1011_cy<30> (Maddsub_n1011_cy<30>)
+     XORCY:CI->O          74   0.180   1.705  Maddsub_n1011_xor<31> (y[31]_GND_4_o_LessThan_231_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_231_o2_INV_0 (y[31]_GND_4_o_LessThan_231_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<0> (Maddsub_n1019_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<1> (Maddsub_n1019_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<2> (Maddsub_n1019_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<3> (Maddsub_n1019_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<4> (Maddsub_n1019_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<5> (Maddsub_n1019_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<6> (Maddsub_n1019_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<7> (Maddsub_n1019_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<8> (Maddsub_n1019_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<9> (Maddsub_n1019_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<10> (Maddsub_n1019_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<11> (Maddsub_n1019_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<12> (Maddsub_n1019_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<13> (Maddsub_n1019_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<14> (Maddsub_n1019_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<15> (Maddsub_n1019_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<16> (Maddsub_n1019_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<17> (Maddsub_n1019_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<18> (Maddsub_n1019_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<19> (Maddsub_n1019_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<20> (Maddsub_n1019_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<21> (Maddsub_n1019_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<22> (Maddsub_n1019_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<23> (Maddsub_n1019_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<24> (Maddsub_n1019_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<25> (Maddsub_n1019_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<26> (Maddsub_n1019_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<27> (Maddsub_n1019_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<28> (Maddsub_n1019_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1019_cy<29> (Maddsub_n1019_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n1019_cy<30> (Maddsub_n1019_cy<30>)
+     XORCY:CI->O          73   0.180   1.699  Maddsub_n1019_xor<31> (y[31]_GND_4_o_LessThan_241_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_241_o2_INV_0 (y[31]_GND_4_o_LessThan_241_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<0> (Maddsub_n1027_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<1> (Maddsub_n1027_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<2> (Maddsub_n1027_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<3> (Maddsub_n1027_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<4> (Maddsub_n1027_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<5> (Maddsub_n1027_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<6> (Maddsub_n1027_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<7> (Maddsub_n1027_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<8> (Maddsub_n1027_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<9> (Maddsub_n1027_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<10> (Maddsub_n1027_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<11> (Maddsub_n1027_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<12> (Maddsub_n1027_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<13> (Maddsub_n1027_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<14> (Maddsub_n1027_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<15> (Maddsub_n1027_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<16> (Maddsub_n1027_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<17> (Maddsub_n1027_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<18> (Maddsub_n1027_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<19> (Maddsub_n1027_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<20> (Maddsub_n1027_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<21> (Maddsub_n1027_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<22> (Maddsub_n1027_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<23> (Maddsub_n1027_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<24> (Maddsub_n1027_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<25> (Maddsub_n1027_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<26> (Maddsub_n1027_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<27> (Maddsub_n1027_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<28> (Maddsub_n1027_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1027_cy<29> (Maddsub_n1027_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n1027_cy<30> (Maddsub_n1027_cy<30>)
+     XORCY:CI->O          72   0.180   1.692  Maddsub_n1027_xor<31> (y[31]_GND_4_o_LessThan_251_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_251_o2_INV_0 (y[31]_GND_4_o_LessThan_251_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<0> (Maddsub_n1035_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<1> (Maddsub_n1035_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<2> (Maddsub_n1035_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<3> (Maddsub_n1035_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<4> (Maddsub_n1035_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<5> (Maddsub_n1035_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<6> (Maddsub_n1035_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<7> (Maddsub_n1035_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<8> (Maddsub_n1035_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<9> (Maddsub_n1035_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<10> (Maddsub_n1035_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<11> (Maddsub_n1035_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<12> (Maddsub_n1035_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<13> (Maddsub_n1035_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<14> (Maddsub_n1035_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<15> (Maddsub_n1035_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<16> (Maddsub_n1035_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<17> (Maddsub_n1035_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<18> (Maddsub_n1035_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<19> (Maddsub_n1035_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<20> (Maddsub_n1035_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<21> (Maddsub_n1035_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<22> (Maddsub_n1035_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<23> (Maddsub_n1035_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<24> (Maddsub_n1035_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<25> (Maddsub_n1035_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<26> (Maddsub_n1035_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<27> (Maddsub_n1035_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<28> (Maddsub_n1035_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1035_cy<29> (Maddsub_n1035_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n1035_cy<30> (Maddsub_n1035_cy<30>)
+     XORCY:CI->O          71   0.180   1.686  Maddsub_n1035_xor<31> (y[31]_GND_4_o_LessThan_261_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_261_o2_INV_0 (y[31]_GND_4_o_LessThan_261_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<0> (Maddsub_n1040_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<1> (Maddsub_n1040_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<2> (Maddsub_n1040_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<3> (Maddsub_n1040_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<4> (Maddsub_n1040_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<5> (Maddsub_n1040_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<6> (Maddsub_n1040_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<7> (Maddsub_n1040_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<8> (Maddsub_n1040_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<9> (Maddsub_n1040_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<10> (Maddsub_n1040_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<11> (Maddsub_n1040_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<12> (Maddsub_n1040_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<13> (Maddsub_n1040_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<14> (Maddsub_n1040_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<15> (Maddsub_n1040_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<16> (Maddsub_n1040_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<17> (Maddsub_n1040_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<18> (Maddsub_n1040_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<19> (Maddsub_n1040_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<20> (Maddsub_n1040_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<21> (Maddsub_n1040_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<22> (Maddsub_n1040_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<23> (Maddsub_n1040_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<24> (Maddsub_n1040_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<25> (Maddsub_n1040_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<26> (Maddsub_n1040_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<27> (Maddsub_n1040_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<28> (Maddsub_n1040_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_n1040_cy<29> (Maddsub_n1040_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_n1040_cy<30> (Maddsub_n1040_cy<30>)
+     XORCY:CI->O          32   0.180   1.291  Maddsub_n1040_xor<31> (n1040<31>)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_271_o2_INV_0 (y[31]_GND_4_o_LessThan_271_o1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<0> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<1> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<2> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<3> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<4> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<5> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<6> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<7> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<8> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<9> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<10> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<11> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<12> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<13> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<14> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<15> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<16> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<17> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<18> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<19> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<20> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<21> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<22> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<23> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<24> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<25> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<26> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<27> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<28> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<29> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Maddsub_y[31]_y[31]_mux_278_OUT_cy<30> (Maddsub_y[31]_y[31]_mux_278_OUT_cy<30>)
+     XORCY:CI->O          33   0.180   1.305  Maddsub_y[31]_y[31]_mux_278_OUT_xor<31> (y[31]_GND_4_o_LessThan_281_o_inv)
+     INV:I->O              1   0.206   0.579  y[31]_GND_4_o_LessThan_281_o_inv11_INV_0 (y[31]_GND_4_o_LessThan_281_o_inv1)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<0> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<1> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<2> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<3> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<4> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<5> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<6> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<7> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<8> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<9> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<10> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<11> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<12> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<13> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<14> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<15> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<16> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<17> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<18> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<19> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<20> (Maddsub_z[31]_z[31]_mux_289_OUT_Madd_cy<20>)
+     XORCY:CI->O           1   0.180   0.944  Maddsub_z[31]_z[31]_mux_289_OUT_Madd_xor<21> (z[31]_z[31]_mux_289_OUT<21>)
+     LUT6:I0->O            1   0.203   0.827  Madd_n0318[9:0]_lut<0>1 (Madd_n0318[9:0]_lut<0>)
+     LUT6:I2->O            6   0.203   0.849  Madd_n0318[9:0]_lut<0>5 (vector_result_0_OBUF)
+     LUT6:I4->O            5   0.203   1.059  Madd_n0318[9:0]_cy<4>11 (Madd_n0318[9:0]_cy<4>)
+     LUT6:I1->O           23   0.203   1.153  Madd_n0318[9:0]_xor<9>11 (vector_result_9_OBUF)
+     OBUF:I->O                 2.571          vector_result_31_OBUF (vector_result<31>)
+    ----------------------------------------
+    Total                    104.729ns (32.689ns logic, 72.039ns route)
+                                       (31.2% logic, 68.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 32.00 secs
+Total CPU time to Xst completion: 31.44 secs
+ 
+--> 
+
+Total memory usage is 307916 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+
